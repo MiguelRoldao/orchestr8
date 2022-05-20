@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/Orchestr8_ecore/src" modelPluginID="Orchestr8_ecore"
+    modelName="Orchestr8" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>Orchestr8.ecore</foreignModel>
+  <genPackages prefix="Orchestr8" disposableProviderFactory="true" ecorePackage="Orchestr8.ecore#/">
+    <genClasses ecoreClass="Orchestr8.ecore#//Score">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Orchestr8.ecore#//Score/bpm"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Orchestr8.ecore#//Score/timeSignature_num"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Orchestr8.ecore#//Score/setup"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Orchestr8.ecore#//Score/end"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Orchestr8.ecore#//Score/measures"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Orchestr8.ecore#//Score/timeSignature_den"/>
+    </genClasses>
+    <genClasses ecoreClass="Orchestr8.ecore#//Instrument">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Orchestr8.ecore#//Instrument/generator"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Orchestr8.ecore#//Instrument/volume"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Orchestr8.ecore#//Instrument/frequency"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Orchestr8.ecore#//Instrument/parameters"/>
+    </genClasses>
+    <genClasses ecoreClass="Orchestr8.ecore#//Mixer">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Orchestr8.ecore#//Mixer/sampling_rate"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Orchestr8.ecore#//Mixer/scores"/>
+    </genClasses>
+    <genClasses ecoreClass="Orchestr8.ecore#//Command">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Orchestr8.ecore#//Command/type"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="Orchestr8.ecore#//Generator">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Orchestr8.ecore#//Generator/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Orchestr8.ecore#//Generator/mode"/>
+    </genClasses>
+    <genClasses ecoreClass="Orchestr8.ecore#//Measure">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Orchestr8.ecore#//Measure/ID"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Orchestr8.ecore#//Measure/beats"/>
+    </genClasses>
+    <genClasses ecoreClass="Orchestr8.ecore#//Beat">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Orchestr8.ecore#//Beat/ID"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Orchestr8.ecore#//Beat/commands"/>
+    </genClasses>
+    <genClasses ecoreClass="Orchestr8.ecore#//Parameter">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Orchestr8.ecore#//Parameter/ID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Orchestr8.ecore#//Parameter/value"/>
+    </genClasses>
+    <genClasses ecoreClass="Orchestr8.ecore#//CmdTempo">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Orchestr8.ecore#//CmdTempo/bpm"/>
+    </genClasses>
+    <genClasses ecoreClass="Orchestr8.ecore#//CmdTimeSignature">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Orchestr8.ecore#//CmdTimeSignature/denominator"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Orchestr8.ecore#//CmdTimeSignature/numerator"/>
+    </genClasses>
+    <genClasses ecoreClass="Orchestr8.ecore#//CmdPlay">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Orchestr8.ecore#//CmdPlay/note"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Orchestr8.ecore#//CmdPlay/length"/>
+    </genClasses>
+    <genClasses ecoreClass="Orchestr8.ecore#//CmdInstrument">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Orchestr8.ecore#//CmdInstrument/parameter"/>
+    </genClasses>
+    <genClasses ecoreClass="Orchestr8.ecore#//CmdSet">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Orchestr8.ecore#//CmdSet/instrument"/>
+    </genClasses>
+    <genClasses ecoreClass="Orchestr8.ecore#//Model">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Orchestr8.ecore#//Model/mixer"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Orchestr8.ecore#//Model/scores"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Orchestr8.ecore#//Model/instruments"/>
+    </genClasses>
+    <genClasses ecoreClass="Orchestr8.ecore#//NamedElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Orchestr8.ecore#//NamedElement/name"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
