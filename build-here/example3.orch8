@@ -1,0 +1,33 @@
+
+Instrument my_inst {
+	custom Exe3Generator
+	volume 0.5
+	pwm 0.5
+}
+
+Score my_score {
+	@Setup
+		time_signature 4/4
+		tempo 120
+		set my_inst
+	@1
+		:1.0
+			play A5 length 1.0
+		:2.0
+		// is this commented >:)
+			play F#5 length 2.0
+	@2
+		:1.0
+			instrument pwm 0.5
+			play A5 length 1.0
+		:2.0
+			play F5 length 2.0
+}
+
+Mixer my_mixer {
+	sampling_rate 48000
+	scores {
+		my_score
+	}
+}
+

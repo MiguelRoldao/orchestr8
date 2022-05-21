@@ -31,7 +31,7 @@ class Orch8Generator extends AbstractGenerator {
 			toJavaCode(resource.contents.head as Model)
 		)
 //		System.out.println(resource.URI.lastSegment)
-		fsa.generateFile("folder_1/file_1.txt", javaLibrary())
+		//fsa.generateFile("folder_1/file_1.txt", javaLibrary())
 		
 		//var file = new File("")
 		//fsa.generateFile("folder_1/test.txt", addIncludeFile)
@@ -63,7 +63,7 @@ class Orch8Generator extends AbstractGenerator {
 		// 2022-05
 		// Miguel Roldao
 		
-		package bingen;
+		package bin;
 		
 		import java.util.ArrayList;
 		import orchestr8.fluentSound.InstrumentBuilder;
@@ -151,11 +151,11 @@ class Orch8Generator extends AbstractGenerator {
 	// currently only the first score is mixed
 	def generateCode(Mixer mixer) {
 		'''
-		ArrayList<Score> __scores = new ArrayList<Score>();
+		ArrayList<Score> __scores__ = new ArrayList<>();
 		«FOR score : mixer.scores»
-			__scores.add(«score.name»);
+			__scores__.add(«score.name»);
 		«ENDFOR»
-		Mixer «mixer.name» = new Mixer(__scores.get(0));
+		Mixer «mixer.name» = new Mixer(__scores__);
 		«mixer.name».sampling_rate = «mixer.sampling_rate»;
 		«FOR score : mixer.scores»
 			«score.name».mixer = «mixer.name»;

@@ -1,0 +1,41 @@
+
+Instrument triangle {
+	custom TriangleGenerator
+}
+
+Score bass {
+	@Setup
+		tempo 130
+		set triangle
+	@1
+		:1.0 play D2 length 0.125
+		:1.25 play D2 length 0.125
+		:1.5 play D2 length 0.125
+		:1.75 play D2 length 0.125
+		:2.0 play D3 length 0.75
+		:2.75 play C3 length 0.5
+		:3.25 play D2 length 0.125
+		:3.5 play D2 length 0.125
+		:3.75 play D2 length 0.125
+		:4.0 play C3 length 0.75
+		:4.75 play B2 length 0.5
+	@2
+		:1.25 play D2 length 0.125
+		:1.5 play D2 length 0.125
+		:1.75 play D2 length 0.125
+		:2.0 play B2 length 0.75
+		:2.75 play Bb2 length 0.25
+		:3.25 play Bb2 length 0.125
+		:3.5 play A2 length 0.125
+		:3.75 play G2 length 0.125
+		:4.0 play A2 length 0.125
+		:4.25 play G2 length 0.125
+		:4.5 play F2 length 0.125
+		:4.75 play E2 length 0.125
+}
+
+Mixer mixer {
+	scores {
+		bass
+	}
+}

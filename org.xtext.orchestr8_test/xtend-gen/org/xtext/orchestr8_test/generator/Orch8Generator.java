@@ -38,7 +38,6 @@ public class Orch8Generator extends AbstractGenerator {
     EObject _head = IterableExtensions.<EObject>head(resource.getContents());
     fsa.generateFile(resource.getURI().lastSegment().replace(".orch8", ".java"), 
       this.toJavaCode(((Model) _head)));
-    fsa.generateFile("folder_1/file_1.txt", this.javaLibrary());
   }
   
   public CharSequence javaLibrary() {
@@ -65,7 +64,7 @@ public class Orch8Generator extends AbstractGenerator {
     _builder.append("// Miguel Roldao");
     _builder.newLine();
     _builder.newLine();
-    _builder.append("package bingen;");
+    _builder.append("package bin;");
     _builder.newLine();
     _builder.newLine();
     _builder.append("import java.util.ArrayList;");
@@ -289,12 +288,12 @@ public class Orch8Generator extends AbstractGenerator {
   
   public CharSequence generateCode(final Mixer mixer) {
     StringConcatenation _builder = new StringConcatenation();
-    _builder.append("ArrayList<Score> __scores = new ArrayList<Score>();");
+    _builder.append("ArrayList<Score> __scores__ = new ArrayList<>();");
     _builder.newLine();
     {
       EList<Score> _scores = mixer.getScores();
       for(final Score score : _scores) {
-        _builder.append("__scores.add(");
+        _builder.append("__scores__.add(");
         String _name = score.getName();
         _builder.append(_name);
         _builder.append(");");
@@ -304,7 +303,7 @@ public class Orch8Generator extends AbstractGenerator {
     _builder.append("Mixer ");
     String _name_1 = mixer.getName();
     _builder.append(_name_1);
-    _builder.append(" = new Mixer(__scores.get(0));");
+    _builder.append(" = new Mixer(__scores__);");
     _builder.newLineIfNotEmpty();
     String _name_2 = mixer.getName();
     _builder.append(_name_2);
