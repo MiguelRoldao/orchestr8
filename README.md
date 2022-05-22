@@ -1,4 +1,7 @@
-Existem alguns bugs relacionados com a biblioteca de geração de som que ainda não estão resolvidos.
-Estou a tratar do assunto para os resolver o mais depressa possível.
+Descrição das pastas:
+Orchestr8_ecore - Projeto EMF com o Meta-Model
+org.xtext.orch8_test.* - Projetos Xtext
+Orchestr8 - Package com as funcionalidades sonoras. Para correr com os ficheiros gerados pelo utilizador. 
+
 
 A expiração do certificado de segurança do git impede-me de fazer updates ao projeto.
