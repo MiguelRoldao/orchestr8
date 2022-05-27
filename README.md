@@ -5,3 +5,8 @@
 - build-here - Pasta preparada para correr ficheiros .orch8
 
 Para mais informação leia a Wiki do projeto!
+
+#### Bugs fixed in the final delivery:
+- Notes now require a length greater than 0.
+- The `play` command can't be used in the `@Setup` and `@End` labels.
+- Names must be unique
