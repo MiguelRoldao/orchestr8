@@ -33,6 +33,7 @@ public class Orch8Parser extends AbstractContentAssistParser {
 		private static void init(ImmutableMap.Builder<AbstractElement, String> builder, Orch8GrammarAccess grammarAccess) {
 			builder.put(grammarAccess.getModelAccess().getAlternatives_0(), "rule__Model__Alternatives_0");
 			builder.put(grammarAccess.getModelAccess().getAlternatives_2(), "rule__Model__Alternatives_2");
+			builder.put(grammarAccess.getSetupCommandAccess().getAlternatives(), "rule__SetupCommand__Alternatives");
 			builder.put(grammarAccess.getCommandAccess().getAlternatives(), "rule__Command__Alternatives");
 			builder.put(grammarAccess.getEStringAccess().getAlternatives(), "rule__EString__Alternatives");
 			builder.put(grammarAccess.getEDoubleAccess().getAlternatives_4_0(), "rule__EDouble__Alternatives_4_0");

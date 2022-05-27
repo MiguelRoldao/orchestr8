@@ -10,13 +10,12 @@ Model returns Model:
 	(scores+=Score | instruments+=Instrument)*
 ;
 
-
+SetupCommand returns Command:
+	CmdTempo | CmdTimeSignature | CmdInstrument | CmdSet
+;
 
 Command returns Command:
 	CmdTempo | CmdTimeSignature | CmdPlay | CmdInstrument | CmdSet;
-
-
-
 
 
 Mixer returns Mixer:
@@ -27,9 +26,9 @@ Mixer returns Mixer:
 
 Score returns Score:
 	'Score' name=EString '{'
-		('@Setup' (setup+=Command)* )?
+		('@Setup' (setup+=SetupCommand)* )?
 		(measures+=Measure)+
-		('@End' (end+=Command)* )?
+		('@End' (end+=SetupCommand)* )?
 	'}';
 
 Instrument returns Instrument:
@@ -86,4 +85,4 @@ Generator returns Generator:
 	mode=('type'|'custom') type=EString
 ;
 
-terminal NOTE: ('a'..'g'|'A'..'Z')('b'|'#')?('0'..'9');
+terminal NOTE: ('a'..'g'|'A'..'G')('b'|'#')?('0'..'9');

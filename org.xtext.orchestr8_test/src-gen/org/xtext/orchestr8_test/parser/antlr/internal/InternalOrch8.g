@@ -180,6 +180,60 @@ ruleModel returns [EObject current=null]
 	)
 ;
 
+// Entry rule entryRuleSetupCommand
+entryRuleSetupCommand returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getSetupCommandRule()); }
+	iv_ruleSetupCommand=ruleSetupCommand
+	{ $current=$iv_ruleSetupCommand.current; }
+	EOF;
+
+// Rule SetupCommand
+ruleSetupCommand returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		{
+			newCompositeNode(grammarAccess.getSetupCommandAccess().getCmdTempoParserRuleCall_0());
+		}
+		this_CmdTempo_0=ruleCmdTempo
+		{
+			$current = $this_CmdTempo_0.current;
+			afterParserOrEnumRuleCall();
+		}
+		    |
+		{
+			newCompositeNode(grammarAccess.getSetupCommandAccess().getCmdTimeSignatureParserRuleCall_1());
+		}
+		this_CmdTimeSignature_1=ruleCmdTimeSignature
+		{
+			$current = $this_CmdTimeSignature_1.current;
+			afterParserOrEnumRuleCall();
+		}
+		    |
+		{
+			newCompositeNode(grammarAccess.getSetupCommandAccess().getCmdInstrumentParserRuleCall_2());
+		}
+		this_CmdInstrument_2=ruleCmdInstrument
+		{
+			$current = $this_CmdInstrument_2.current;
+			afterParserOrEnumRuleCall();
+		}
+		    |
+		{
+			newCompositeNode(grammarAccess.getSetupCommandAccess().getCmdSetParserRuleCall_3());
+		}
+		this_CmdSet_3=ruleCmdSet
+		{
+			$current = $this_CmdSet_3.current;
+			afterParserOrEnumRuleCall();
+		}
+	)
+;
+
 // Entry rule entryRuleCommand
 entryRuleCommand returns [EObject current=null]:
 	{ newCompositeNode(grammarAccess.getCommandRule()); }
@@ -419,9 +473,9 @@ ruleScore returns [EObject current=null]
 			(
 				(
 					{
-						newCompositeNode(grammarAccess.getScoreAccess().getSetupCommandParserRuleCall_3_1_0());
+						newCompositeNode(grammarAccess.getScoreAccess().getSetupSetupCommandParserRuleCall_3_1_0());
 					}
-					lv_setup_4_0=ruleCommand
+					lv_setup_4_0=ruleSetupCommand
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getScoreRule());
@@ -430,7 +484,7 @@ ruleScore returns [EObject current=null]
 							$current,
 							"setup",
 							lv_setup_4_0,
-							"org.xtext.orchestr8_test.Orch8.Command");
+							"org.xtext.orchestr8_test.Orch8.SetupCommand");
 						afterParserOrEnumRuleCall();
 					}
 				)
@@ -463,9 +517,9 @@ ruleScore returns [EObject current=null]
 			(
 				(
 					{
-						newCompositeNode(grammarAccess.getScoreAccess().getEndCommandParserRuleCall_5_1_0());
+						newCompositeNode(grammarAccess.getScoreAccess().getEndSetupCommandParserRuleCall_5_1_0());
 					}
-					lv_end_7_0=ruleCommand
+					lv_end_7_0=ruleSetupCommand
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getScoreRule());
@@ -474,7 +528,7 @@ ruleScore returns [EObject current=null]
 							$current,
 							"end",
 							lv_end_7_0,
-							"org.xtext.orchestr8_test.Orch8.Command");
+							"org.xtext.orchestr8_test.Orch8.SetupCommand");
 						afterParserOrEnumRuleCall();
 					}
 				)
@@ -1271,7 +1325,7 @@ ruleGenerator returns [EObject current=null]
 	)
 ;
 
-RULE_NOTE : ('a'..'g'|'A'..'Z') ('b'|'#')? '0'..'9';
+RULE_NOTE : ('a'..'g'|'A'..'G') ('b'|'#')? '0'..'9';
 
 RULE_ID : '^'? ('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;
 

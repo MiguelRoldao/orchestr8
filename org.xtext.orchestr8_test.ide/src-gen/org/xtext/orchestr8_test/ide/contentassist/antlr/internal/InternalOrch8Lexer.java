@@ -580,10 +580,10 @@ public class InternalOrch8Lexer extends Lexer {
         try {
             int _type = RULE_NOTE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalOrch8.g:3077:11: ( ( 'a' .. 'g' | 'A' .. 'Z' ) ( 'b' | '#' )? '0' .. '9' )
-            // InternalOrch8.g:3077:13: ( 'a' .. 'g' | 'A' .. 'Z' ) ( 'b' | '#' )? '0' .. '9'
+            // InternalOrch8.g:3135:11: ( ( 'a' .. 'g' | 'A' .. 'G' ) ( 'b' | '#' )? '0' .. '9' )
+            // InternalOrch8.g:3135:13: ( 'a' .. 'g' | 'A' .. 'G' ) ( 'b' | '#' )? '0' .. '9'
             {
-            if ( (input.LA(1)>='A' && input.LA(1)<='Z')||(input.LA(1)>='a' && input.LA(1)<='g') ) {
+            if ( (input.LA(1)>='A' && input.LA(1)<='G')||(input.LA(1)>='a' && input.LA(1)<='g') ) {
                 input.consume();
 
             }
@@ -592,7 +592,7 @@ public class InternalOrch8Lexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // InternalOrch8.g:3077:33: ( 'b' | '#' )?
+            // InternalOrch8.g:3135:33: ( 'b' | '#' )?
             int alt1=2;
             int LA1_0 = input.LA(1);
 
@@ -635,10 +635,10 @@ public class InternalOrch8Lexer extends Lexer {
         try {
             int _type = RULE_ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalOrch8.g:3079:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
-            // InternalOrch8.g:3079:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // InternalOrch8.g:3137:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
+            // InternalOrch8.g:3137:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             {
-            // InternalOrch8.g:3079:11: ( '^' )?
+            // InternalOrch8.g:3137:11: ( '^' )?
             int alt2=2;
             int LA2_0 = input.LA(1);
 
@@ -647,7 +647,7 @@ public class InternalOrch8Lexer extends Lexer {
             }
             switch (alt2) {
                 case 1 :
-                    // InternalOrch8.g:3079:11: '^'
+                    // InternalOrch8.g:3137:11: '^'
                     {
                     match('^'); 
 
@@ -665,7 +665,7 @@ public class InternalOrch8Lexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // InternalOrch8.g:3079:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // InternalOrch8.g:3137:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             loop3:
             do {
                 int alt3=2;
@@ -714,10 +714,10 @@ public class InternalOrch8Lexer extends Lexer {
         try {
             int _type = RULE_INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalOrch8.g:3081:10: ( ( '0' .. '9' )+ )
-            // InternalOrch8.g:3081:12: ( '0' .. '9' )+
+            // InternalOrch8.g:3139:10: ( ( '0' .. '9' )+ )
+            // InternalOrch8.g:3139:12: ( '0' .. '9' )+
             {
-            // InternalOrch8.g:3081:12: ( '0' .. '9' )+
+            // InternalOrch8.g:3139:12: ( '0' .. '9' )+
             int cnt4=0;
             loop4:
             do {
@@ -731,7 +731,7 @@ public class InternalOrch8Lexer extends Lexer {
 
                 switch (alt4) {
             	case 1 :
-            	    // InternalOrch8.g:3081:13: '0' .. '9'
+            	    // InternalOrch8.g:3139:13: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -763,10 +763,10 @@ public class InternalOrch8Lexer extends Lexer {
         try {
             int _type = RULE_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalOrch8.g:3083:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
-            // InternalOrch8.g:3083:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // InternalOrch8.g:3141:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
+            // InternalOrch8.g:3141:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             {
-            // InternalOrch8.g:3083:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // InternalOrch8.g:3141:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             int alt7=2;
             int LA7_0 = input.LA(1);
 
@@ -784,10 +784,10 @@ public class InternalOrch8Lexer extends Lexer {
             }
             switch (alt7) {
                 case 1 :
-                    // InternalOrch8.g:3083:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
+                    // InternalOrch8.g:3141:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
                     {
                     match('\"'); 
-                    // InternalOrch8.g:3083:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
+                    // InternalOrch8.g:3141:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
                     loop5:
                     do {
                         int alt5=3;
@@ -803,7 +803,7 @@ public class InternalOrch8Lexer extends Lexer {
 
                         switch (alt5) {
                     	case 1 :
-                    	    // InternalOrch8.g:3083:21: '\\\\' .
+                    	    // InternalOrch8.g:3141:21: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -811,7 +811,7 @@ public class InternalOrch8Lexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // InternalOrch8.g:3083:28: ~ ( ( '\\\\' | '\"' ) )
+                    	    // InternalOrch8.g:3141:28: ~ ( ( '\\\\' | '\"' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -836,10 +836,10 @@ public class InternalOrch8Lexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // InternalOrch8.g:3083:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
+                    // InternalOrch8.g:3141:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
                     {
                     match('\''); 
-                    // InternalOrch8.g:3083:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
+                    // InternalOrch8.g:3141:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
                     loop6:
                     do {
                         int alt6=3;
@@ -855,7 +855,7 @@ public class InternalOrch8Lexer extends Lexer {
 
                         switch (alt6) {
                     	case 1 :
-                    	    // InternalOrch8.g:3083:54: '\\\\' .
+                    	    // InternalOrch8.g:3141:54: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -863,7 +863,7 @@ public class InternalOrch8Lexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // InternalOrch8.g:3083:61: ~ ( ( '\\\\' | '\\'' ) )
+                    	    // InternalOrch8.g:3141:61: ~ ( ( '\\\\' | '\\'' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -906,12 +906,12 @@ public class InternalOrch8Lexer extends Lexer {
         try {
             int _type = RULE_ML_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalOrch8.g:3085:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // InternalOrch8.g:3085:19: '/*' ( options {greedy=false; } : . )* '*/'
+            // InternalOrch8.g:3143:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // InternalOrch8.g:3143:19: '/*' ( options {greedy=false; } : . )* '*/'
             {
             match("/*"); 
 
-            // InternalOrch8.g:3085:24: ( options {greedy=false; } : . )*
+            // InternalOrch8.g:3143:24: ( options {greedy=false; } : . )*
             loop8:
             do {
                 int alt8=2;
@@ -936,7 +936,7 @@ public class InternalOrch8Lexer extends Lexer {
 
                 switch (alt8) {
             	case 1 :
-            	    // InternalOrch8.g:3085:52: .
+            	    // InternalOrch8.g:3143:52: .
             	    {
             	    matchAny(); 
 
@@ -966,12 +966,12 @@ public class InternalOrch8Lexer extends Lexer {
         try {
             int _type = RULE_SL_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalOrch8.g:3087:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // InternalOrch8.g:3087:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // InternalOrch8.g:3145:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // InternalOrch8.g:3145:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             match("//"); 
 
-            // InternalOrch8.g:3087:24: (~ ( ( '\\n' | '\\r' ) ) )*
+            // InternalOrch8.g:3145:24: (~ ( ( '\\n' | '\\r' ) ) )*
             loop9:
             do {
                 int alt9=2;
@@ -984,7 +984,7 @@ public class InternalOrch8Lexer extends Lexer {
 
                 switch (alt9) {
             	case 1 :
-            	    // InternalOrch8.g:3087:24: ~ ( ( '\\n' | '\\r' ) )
+            	    // InternalOrch8.g:3145:24: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -1004,7 +1004,7 @@ public class InternalOrch8Lexer extends Lexer {
                 }
             } while (true);
 
-            // InternalOrch8.g:3087:40: ( ( '\\r' )? '\\n' )?
+            // InternalOrch8.g:3145:40: ( ( '\\r' )? '\\n' )?
             int alt11=2;
             int LA11_0 = input.LA(1);
 
@@ -1013,9 +1013,9 @@ public class InternalOrch8Lexer extends Lexer {
             }
             switch (alt11) {
                 case 1 :
-                    // InternalOrch8.g:3087:41: ( '\\r' )? '\\n'
+                    // InternalOrch8.g:3145:41: ( '\\r' )? '\\n'
                     {
-                    // InternalOrch8.g:3087:41: ( '\\r' )?
+                    // InternalOrch8.g:3145:41: ( '\\r' )?
                     int alt10=2;
                     int LA10_0 = input.LA(1);
 
@@ -1024,7 +1024,7 @@ public class InternalOrch8Lexer extends Lexer {
                     }
                     switch (alt10) {
                         case 1 :
-                            // InternalOrch8.g:3087:41: '\\r'
+                            // InternalOrch8.g:3145:41: '\\r'
                             {
                             match('\r'); 
 
@@ -1056,10 +1056,10 @@ public class InternalOrch8Lexer extends Lexer {
         try {
             int _type = RULE_WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalOrch8.g:3089:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-            // InternalOrch8.g:3089:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // InternalOrch8.g:3147:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+            // InternalOrch8.g:3147:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             {
-            // InternalOrch8.g:3089:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // InternalOrch8.g:3147:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             int cnt12=0;
             loop12:
             do {
@@ -1113,8 +1113,8 @@ public class InternalOrch8Lexer extends Lexer {
         try {
             int _type = RULE_ANY_OTHER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalOrch8.g:3091:16: ( . )
-            // InternalOrch8.g:3091:18: .
+            // InternalOrch8.g:3149:16: ( . )
+            // InternalOrch8.g:3149:18: .
             {
             matchAny(); 
 
@@ -1376,7 +1376,7 @@ public class InternalOrch8Lexer extends Lexer {
     static final String DFA13_eofS =
         "\u008c\uffff";
     static final String DFA13_minS =
-        "\1\0\2\43\1\145\2\43\1\uffff\1\141\2\uffff\1\43\1\105\1\43\2\uffff\1\145\1\52\1\uffff\1\156\1\154\1\43\1\101\2\uffff\2\0\2\uffff\1\60\1\uffff\1\60\3\uffff\1\160\2\155\1\163\1\170\1\uffff\1\157\1\155\1\164\2\uffff\1\157\3\uffff\1\163\2\uffff\1\156\4\uffff\1\163\1\141\3\uffff\1\145\1\160\1\145\1\164\1\145\1\162\1\160\1\60\1\162\1\164\1\147\1\164\1\171\1\60\1\157\1\137\1\157\1\162\1\145\1\154\1\uffff\1\145\1\162\1\164\1\162\1\60\1\uffff\1\60\1\163\1\155\1\60\1\163\1\151\1\60\1\165\1\150\1\165\2\uffff\1\151\1\60\1\uffff\1\60\1\156\1\uffff\1\155\1\60\1\155\1\147\2\uffff\1\147\1\145\1\uffff\1\145\1\156\1\137\2\156\1\141\1\162\3\164\1\141\2\60\1\165\1\164\2\uffff\1\162\2\145\2\60\2\uffff";
+        "\1\0\2\43\1\145\1\43\1\151\1\uffff\1\141\2\uffff\1\143\1\105\1\156\2\uffff\1\145\1\52\1\uffff\1\156\1\154\1\43\1\101\2\uffff\2\0\2\uffff\1\60\1\uffff\1\60\3\uffff\1\160\2\155\1\163\1\170\1\uffff\1\157\1\155\1\164\2\uffff\1\157\3\uffff\1\163\2\uffff\1\156\4\uffff\1\163\1\141\3\uffff\1\145\1\160\1\145\1\164\1\145\1\162\1\160\1\60\1\162\1\164\1\147\1\164\1\171\1\60\1\157\1\137\1\157\1\162\1\145\1\154\1\uffff\1\145\1\162\1\164\1\162\1\60\1\uffff\1\60\1\163\1\155\1\60\1\163\1\151\1\60\1\165\1\150\1\165\2\uffff\1\151\1\60\1\uffff\1\60\1\156\1\uffff\1\155\1\60\1\155\1\147\2\uffff\1\147\1\145\1\uffff\1\145\1\156\1\137\2\156\1\141\1\162\3\164\1\141\2\60\1\165\1\164\2\uffff\1\162\2\145\2\60\2\uffff";
     static final String DFA13_maxS =
         "\1\uffff\2\172\1\171\1\165\1\151\1\uffff\1\145\2\uffff\1\143\1\123\1\156\2\uffff\1\145\1\57\1\uffff\1\156\1\154\1\142\1\172\2\uffff\2\uffff\2\uffff\1\71\1\uffff\1\172\3\uffff\1\160\2\155\1\163\1\170\1\uffff\1\157\1\155\1\164\2\uffff\1\157\3\uffff\1\163\2\uffff\1\156\4\uffff\1\163\1\141\3\uffff\1\145\1\160\1\145\1\164\1\145\1\162\1\160\1\172\1\162\1\164\1\147\1\164\1\171\1\172\1\157\1\137\1\157\1\162\1\145\1\154\1\uffff\1\145\1\162\1\164\1\162\1\172\1\uffff\1\172\1\163\1\155\1\172\1\163\1\151\1\172\1\165\1\150\1\165\2\uffff\1\151\1\172\1\uffff\1\172\1\156\1\uffff\1\155\1\172\1\155\1\147\2\uffff\1\147\1\145\1\uffff\1\145\1\156\1\137\2\156\1\141\1\162\3\164\1\141\2\172\1\165\1\164\2\uffff\1\162\2\145\2\172\2\uffff";
     static final String DFA13_acceptS =
@@ -1384,19 +1384,19 @@ public class InternalOrch8Lexer extends Lexer {
     static final String DFA13_specialS =
         "\1\1\27\uffff\1\0\1\2\162\uffff}>";
     static final String[] DFA13_transitionS = {
-            "\11\33\2\32\2\33\1\32\22\33\1\32\1\33\1\30\4\33\1\31\4\33\1\11\1\15\1\16\1\20\12\27\1\21\5\33\1\13\4\24\1\1\3\24\1\14\3\24\1\5\5\24\1\12\7\24\3\33\1\25\1\26\1\33\2\24\1\4\1\24\1\2\2\24\1\26\1\22\2\26\1\17\3\26\1\23\2\26\1\7\1\3\6\26\1\6\1\33\1\10\uff82\33",
+            "\11\33\2\32\2\33\1\32\22\33\1\32\1\33\1\30\4\33\1\31\4\33\1\11\1\15\1\16\1\20\12\27\1\21\5\33\1\13\4\24\1\1\2\24\1\26\1\14\3\26\1\5\5\26\1\12\7\26\3\33\1\25\1\26\1\33\2\24\1\4\1\24\1\2\2\24\1\26\1\22\2\26\1\17\3\26\1\23\2\26\1\7\1\3\6\26\1\6\1\33\1\10\uff82\33",
             "\1\37\14\uffff\12\36\7\uffff\32\40\4\uffff\1\40\1\uffff\1\40\1\34\30\40",
             "\1\37\14\uffff\12\36\7\uffff\32\40\4\uffff\1\40\1\uffff\1\40\1\34\30\40",
             "\1\43\3\uffff\1\44\17\uffff\1\42",
             "\1\37\14\uffff\12\36\50\uffff\1\34\22\uffff\1\45",
-            "\1\37\14\uffff\12\36\50\uffff\1\34\6\uffff\1\46",
+            "\1\46",
             "",
             "\1\51\1\uffff\1\50\1\uffff\1\52",
             "",
             "",
-            "\1\37\14\uffff\12\36\50\uffff\1\34\1\55",
+            "\1\55",
             "\1\57\15\uffff\1\56",
-            "\1\37\14\uffff\12\36\50\uffff\1\34\13\uffff\1\61",
+            "\1\61",
             "",
             "",
             "\1\64",
@@ -1614,11 +1614,11 @@ public class InternalOrch8Lexer extends Lexer {
 
                         else if ( (LA13_0=='p') ) {s = 19;}
 
-                        else if ( ((LA13_0>='A' && LA13_0<='D')||(LA13_0>='F' && LA13_0<='H')||(LA13_0>='J' && LA13_0<='L')||(LA13_0>='N' && LA13_0<='R')||(LA13_0>='T' && LA13_0<='Z')||(LA13_0>='a' && LA13_0<='b')||LA13_0=='d'||(LA13_0>='f' && LA13_0<='g')) ) {s = 20;}
+                        else if ( ((LA13_0>='A' && LA13_0<='D')||(LA13_0>='F' && LA13_0<='G')||(LA13_0>='a' && LA13_0<='b')||LA13_0=='d'||(LA13_0>='f' && LA13_0<='g')) ) {s = 20;}
 
                         else if ( (LA13_0=='^') ) {s = 21;}
 
-                        else if ( (LA13_0=='_'||LA13_0=='h'||(LA13_0>='j' && LA13_0<='k')||(LA13_0>='m' && LA13_0<='o')||(LA13_0>='q' && LA13_0<='r')||(LA13_0>='u' && LA13_0<='z')) ) {s = 22;}
+                        else if ( (LA13_0=='H'||(LA13_0>='J' && LA13_0<='L')||(LA13_0>='N' && LA13_0<='R')||(LA13_0>='T' && LA13_0<='Z')||LA13_0=='_'||LA13_0=='h'||(LA13_0>='j' && LA13_0<='k')||(LA13_0>='m' && LA13_0<='o')||(LA13_0>='q' && LA13_0<='r')||(LA13_0>='u' && LA13_0<='z')) ) {s = 22;}
 
                         else if ( ((LA13_0>='0' && LA13_0<='9')) ) {s = 23;}
 

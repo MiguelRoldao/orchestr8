@@ -104,6 +104,7 @@ public class Orch8SemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	/**
 	 * <pre>
 	 * Contexts:
+	 *     SetupCommand returns CmdInstrument
 	 *     Command returns CmdInstrument
 	 *     CmdInstrument returns CmdInstrument
 	 *
@@ -155,6 +156,7 @@ public class Orch8SemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	/**
 	 * <pre>
 	 * Contexts:
+	 *     SetupCommand returns CmdSet
 	 *     Command returns CmdSet
 	 *     CmdSet returns CmdSet
 	 *
@@ -179,6 +181,7 @@ public class Orch8SemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	/**
 	 * <pre>
 	 * Contexts:
+	 *     SetupCommand returns CmdTempo
 	 *     Command returns CmdTempo
 	 *     CmdTempo returns CmdTempo
 	 *
@@ -203,6 +206,7 @@ public class Orch8SemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	/**
 	 * <pre>
 	 * Contexts:
+	 *     SetupCommand returns CmdTimeSignature
 	 *     Command returns CmdTimeSignature
 	 *     CmdTimeSignature returns CmdTimeSignature
 	 *
@@ -326,7 +330,7 @@ public class Orch8SemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 *     Score returns Score
 	 *
 	 * Constraint:
-	 *     (name=EString setup+=Command* measures+=Measure+ end+=Command*)
+	 *     (name=EString setup+=SetupCommand* measures+=Measure+ end+=SetupCommand*)
 	 * </pre>
 	 */
 	protected void sequence_Score(ISerializationContext context, Score semanticObject) {

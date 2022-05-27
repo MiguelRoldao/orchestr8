@@ -88,6 +88,34 @@ public class Orch8GrammarAccess extends AbstractElementFinder.AbstractGrammarEle
 		//Instrument
 		public RuleCall getInstrumentsInstrumentParserRuleCall_2_1_0() { return cInstrumentsInstrumentParserRuleCall_2_1_0; }
 	}
+	public class SetupCommandElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.orchestr8_test.Orch8.SetupCommand");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final RuleCall cCmdTempoParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
+		private final RuleCall cCmdTimeSignatureParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		private final RuleCall cCmdInstrumentParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
+		private final RuleCall cCmdSetParserRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
+		
+		//SetupCommand returns Command:
+		//    CmdTempo | CmdTimeSignature | CmdInstrument | CmdSet
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//CmdTempo | CmdTimeSignature | CmdInstrument | CmdSet
+		public Alternatives getAlternatives() { return cAlternatives; }
+		
+		//CmdTempo
+		public RuleCall getCmdTempoParserRuleCall_0() { return cCmdTempoParserRuleCall_0; }
+		
+		//CmdTimeSignature
+		public RuleCall getCmdTimeSignatureParserRuleCall_1() { return cCmdTimeSignatureParserRuleCall_1; }
+		
+		//CmdInstrument
+		public RuleCall getCmdInstrumentParserRuleCall_2() { return cCmdInstrumentParserRuleCall_2; }
+		
+		//CmdSet
+		public RuleCall getCmdSetParserRuleCall_3() { return cCmdSetParserRuleCall_3; }
+	}
 	public class CommandElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.orchestr8_test.Orch8.Command");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
@@ -226,27 +254,27 @@ public class Orch8GrammarAccess extends AbstractElementFinder.AbstractGrammarEle
 		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
 		private final Keyword cSetupKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
 		private final Assignment cSetupAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
-		private final RuleCall cSetupCommandParserRuleCall_3_1_0 = (RuleCall)cSetupAssignment_3_1.eContents().get(0);
+		private final RuleCall cSetupSetupCommandParserRuleCall_3_1_0 = (RuleCall)cSetupAssignment_3_1.eContents().get(0);
 		private final Assignment cMeasuresAssignment_4 = (Assignment)cGroup.eContents().get(4);
 		private final RuleCall cMeasuresMeasureParserRuleCall_4_0 = (RuleCall)cMeasuresAssignment_4.eContents().get(0);
 		private final Group cGroup_5 = (Group)cGroup.eContents().get(5);
 		private final Keyword cEndKeyword_5_0 = (Keyword)cGroup_5.eContents().get(0);
 		private final Assignment cEndAssignment_5_1 = (Assignment)cGroup_5.eContents().get(1);
-		private final RuleCall cEndCommandParserRuleCall_5_1_0 = (RuleCall)cEndAssignment_5_1.eContents().get(0);
+		private final RuleCall cEndSetupCommandParserRuleCall_5_1_0 = (RuleCall)cEndAssignment_5_1.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		
 		//Score returns Score:
 		//    'Score' name=EString '{'
-		//        ('@Setup' (setup+=Command)* )?
+		//        ('@Setup' (setup+=SetupCommand)* )?
 		//        (measures+=Measure)+
-		//        ('@End' (end+=Command)* )?
+		//        ('@End' (end+=SetupCommand)* )?
 		//    '}';
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'Score' name=EString '{'
-		//    ('@Setup' (setup+=Command)* )?
+		//    ('@Setup' (setup+=SetupCommand)* )?
 		//    (measures+=Measure)+
-		//    ('@End' (end+=Command)* )?
+		//    ('@End' (end+=SetupCommand)* )?
 		//'}'
 		public Group getGroup() { return cGroup; }
 		
@@ -262,17 +290,17 @@ public class Orch8GrammarAccess extends AbstractElementFinder.AbstractGrammarEle
 		//'{'
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 		
-		//('@Setup' (setup+=Command)* )?
+		//('@Setup' (setup+=SetupCommand)* )?
 		public Group getGroup_3() { return cGroup_3; }
 		
 		//'@Setup'
 		public Keyword getSetupKeyword_3_0() { return cSetupKeyword_3_0; }
 		
-		//(setup+=Command)*
+		//(setup+=SetupCommand)*
 		public Assignment getSetupAssignment_3_1() { return cSetupAssignment_3_1; }
 		
-		//Command
-		public RuleCall getSetupCommandParserRuleCall_3_1_0() { return cSetupCommandParserRuleCall_3_1_0; }
+		//SetupCommand
+		public RuleCall getSetupSetupCommandParserRuleCall_3_1_0() { return cSetupSetupCommandParserRuleCall_3_1_0; }
 		
 		//(measures+=Measure)+
 		public Assignment getMeasuresAssignment_4() { return cMeasuresAssignment_4; }
@@ -280,17 +308,17 @@ public class Orch8GrammarAccess extends AbstractElementFinder.AbstractGrammarEle
 		//Measure
 		public RuleCall getMeasuresMeasureParserRuleCall_4_0() { return cMeasuresMeasureParserRuleCall_4_0; }
 		
-		//('@End' (end+=Command)* )?
+		//('@End' (end+=SetupCommand)* )?
 		public Group getGroup_5() { return cGroup_5; }
 		
 		//'@End'
 		public Keyword getEndKeyword_5_0() { return cEndKeyword_5_0; }
 		
-		//(end+=Command)*
+		//(end+=SetupCommand)*
 		public Assignment getEndAssignment_5_1() { return cEndAssignment_5_1; }
 		
-		//Command
-		public RuleCall getEndCommandParserRuleCall_5_1_0() { return cEndCommandParserRuleCall_5_1_0; }
+		//SetupCommand
+		public RuleCall getEndSetupCommandParserRuleCall_5_1_0() { return cEndSetupCommandParserRuleCall_5_1_0; }
 		
 		//'}'
 		public Keyword getRightCurlyBracketKeyword_6() { return cRightCurlyBracketKeyword_6; }
@@ -746,6 +774,7 @@ public class Orch8GrammarAccess extends AbstractElementFinder.AbstractGrammarEle
 	
 	
 	private final ModelElements pModel;
+	private final SetupCommandElements pSetupCommand;
 	private final CommandElements pCommand;
 	private final MixerElements pMixer;
 	private final ScoreElements pScore;
@@ -774,6 +803,7 @@ public class Orch8GrammarAccess extends AbstractElementFinder.AbstractGrammarEle
 		this.grammar = internalFindGrammar(grammarProvider);
 		this.gaTerminals = gaTerminals;
 		this.pModel = new ModelElements();
+		this.pSetupCommand = new SetupCommandElements();
 		this.pCommand = new CommandElements();
 		this.pMixer = new MixerElements();
 		this.pScore = new ScoreElements();
@@ -833,6 +863,17 @@ public class Orch8GrammarAccess extends AbstractElementFinder.AbstractGrammarEle
 		return getModelAccess().getRule();
 	}
 	
+	//SetupCommand returns Command:
+	//    CmdTempo | CmdTimeSignature | CmdInstrument | CmdSet
+	//;
+	public SetupCommandElements getSetupCommandAccess() {
+		return pSetupCommand;
+	}
+	
+	public ParserRule getSetupCommandRule() {
+		return getSetupCommandAccess().getRule();
+	}
+	
 	//Command returns Command:
 	//    CmdTempo | CmdTimeSignature | CmdPlay | CmdInstrument | CmdSet;
 	public CommandElements getCommandAccess() {
@@ -858,9 +899,9 @@ public class Orch8GrammarAccess extends AbstractElementFinder.AbstractGrammarEle
 	
 	//Score returns Score:
 	//    'Score' name=EString '{'
-	//        ('@Setup' (setup+=Command)* )?
+	//        ('@Setup' (setup+=SetupCommand)* )?
 	//        (measures+=Measure)+
-	//        ('@End' (end+=Command)* )?
+	//        ('@End' (end+=SetupCommand)* )?
 	//    '}';
 	public ScoreElements getScoreAccess() {
 		return pScore;
@@ -1015,7 +1056,7 @@ public class Orch8GrammarAccess extends AbstractElementFinder.AbstractGrammarEle
 		return getGeneratorAccess().getRule();
 	}
 	
-	//terminal NOTE: ('a'..'g'|'A'..'Z')('b'|'#')?('0'..'9');
+	//terminal NOTE: ('a'..'g'|'A'..'G')('b'|'#')?('0'..'9');
 	public TerminalRule getNOTERule() {
 		return tNOTE;
 	}

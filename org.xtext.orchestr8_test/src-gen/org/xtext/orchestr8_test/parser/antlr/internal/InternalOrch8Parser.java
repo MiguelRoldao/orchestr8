@@ -402,8 +402,190 @@ public class InternalOrch8Parser extends AbstractInternalAntlrParser {
     // $ANTLR end "ruleModel"
 
 
+    // $ANTLR start "entryRuleSetupCommand"
+    // InternalOrch8.g:184:1: entryRuleSetupCommand returns [EObject current=null] : iv_ruleSetupCommand= ruleSetupCommand EOF ;
+    public final EObject entryRuleSetupCommand() throws RecognitionException {
+        EObject current = null;
+
+        EObject iv_ruleSetupCommand = null;
+
+
+        try {
+            // InternalOrch8.g:184:53: (iv_ruleSetupCommand= ruleSetupCommand EOF )
+            // InternalOrch8.g:185:2: iv_ruleSetupCommand= ruleSetupCommand EOF
+            {
+             newCompositeNode(grammarAccess.getSetupCommandRule()); 
+            pushFollow(FOLLOW_1);
+            iv_ruleSetupCommand=ruleSetupCommand();
+
+            state._fsp--;
+
+             current =iv_ruleSetupCommand; 
+            match(input,EOF,FOLLOW_2); 
+
+            }
+
+        }
+
+            catch (RecognitionException re) {
+                recover(input,re);
+                appendSkippedTokens();
+            }
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "entryRuleSetupCommand"
+
+
+    // $ANTLR start "ruleSetupCommand"
+    // InternalOrch8.g:191:1: ruleSetupCommand returns [EObject current=null] : (this_CmdTempo_0= ruleCmdTempo | this_CmdTimeSignature_1= ruleCmdTimeSignature | this_CmdInstrument_2= ruleCmdInstrument | this_CmdSet_3= ruleCmdSet ) ;
+    public final EObject ruleSetupCommand() throws RecognitionException {
+        EObject current = null;
+
+        EObject this_CmdTempo_0 = null;
+
+        EObject this_CmdTimeSignature_1 = null;
+
+        EObject this_CmdInstrument_2 = null;
+
+        EObject this_CmdSet_3 = null;
+
+
+
+        	enterRule();
+
+        try {
+            // InternalOrch8.g:197:2: ( (this_CmdTempo_0= ruleCmdTempo | this_CmdTimeSignature_1= ruleCmdTimeSignature | this_CmdInstrument_2= ruleCmdInstrument | this_CmdSet_3= ruleCmdSet ) )
+            // InternalOrch8.g:198:2: (this_CmdTempo_0= ruleCmdTempo | this_CmdTimeSignature_1= ruleCmdTimeSignature | this_CmdInstrument_2= ruleCmdInstrument | this_CmdSet_3= ruleCmdSet )
+            {
+            // InternalOrch8.g:198:2: (this_CmdTempo_0= ruleCmdTempo | this_CmdTimeSignature_1= ruleCmdTimeSignature | this_CmdInstrument_2= ruleCmdInstrument | this_CmdSet_3= ruleCmdSet )
+            int alt3=4;
+            switch ( input.LA(1) ) {
+            case 30:
+                {
+                alt3=1;
+                }
+                break;
+            case 31:
+                {
+                alt3=2;
+                }
+                break;
+            case 27:
+                {
+                alt3=3;
+                }
+                break;
+            case 33:
+                {
+                alt3=4;
+                }
+                break;
+            default:
+                NoViableAltException nvae =
+                    new NoViableAltException("", 3, 0, input);
+
+                throw nvae;
+            }
+
+            switch (alt3) {
+                case 1 :
+                    // InternalOrch8.g:199:3: this_CmdTempo_0= ruleCmdTempo
+                    {
+
+                    			newCompositeNode(grammarAccess.getSetupCommandAccess().getCmdTempoParserRuleCall_0());
+                    		
+                    pushFollow(FOLLOW_2);
+                    this_CmdTempo_0=ruleCmdTempo();
+
+                    state._fsp--;
+
+
+                    			current = this_CmdTempo_0;
+                    			afterParserOrEnumRuleCall();
+                    		
+
+                    }
+                    break;
+                case 2 :
+                    // InternalOrch8.g:208:3: this_CmdTimeSignature_1= ruleCmdTimeSignature
+                    {
+
+                    			newCompositeNode(grammarAccess.getSetupCommandAccess().getCmdTimeSignatureParserRuleCall_1());
+                    		
+                    pushFollow(FOLLOW_2);
+                    this_CmdTimeSignature_1=ruleCmdTimeSignature();
+
+                    state._fsp--;
+
+
+                    			current = this_CmdTimeSignature_1;
+                    			afterParserOrEnumRuleCall();
+                    		
+
+                    }
+                    break;
+                case 3 :
+                    // InternalOrch8.g:217:3: this_CmdInstrument_2= ruleCmdInstrument
+                    {
+
+                    			newCompositeNode(grammarAccess.getSetupCommandAccess().getCmdInstrumentParserRuleCall_2());
+                    		
+                    pushFollow(FOLLOW_2);
+                    this_CmdInstrument_2=ruleCmdInstrument();
+
+                    state._fsp--;
+
+
+                    			current = this_CmdInstrument_2;
+                    			afterParserOrEnumRuleCall();
+                    		
+
+                    }
+                    break;
+                case 4 :
+                    // InternalOrch8.g:226:3: this_CmdSet_3= ruleCmdSet
+                    {
+
+                    			newCompositeNode(grammarAccess.getSetupCommandAccess().getCmdSetParserRuleCall_3());
+                    		
+                    pushFollow(FOLLOW_2);
+                    this_CmdSet_3=ruleCmdSet();
+
+                    state._fsp--;
+
+
+                    			current = this_CmdSet_3;
+                    			afterParserOrEnumRuleCall();
+                    		
+
+                    }
+                    break;
+
+            }
+
+
+            }
+
+
+            	leaveRule();
+
+        }
+
+            catch (RecognitionException re) {
+                recover(input,re);
+                appendSkippedTokens();
+            }
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "ruleSetupCommand"
+
+
     // $ANTLR start "entryRuleCommand"
-    // InternalOrch8.g:184:1: entryRuleCommand returns [EObject current=null] : iv_ruleCommand= ruleCommand EOF ;
+    // InternalOrch8.g:238:1: entryRuleCommand returns [EObject current=null] : iv_ruleCommand= ruleCommand EOF ;
     public final EObject entryRuleCommand() throws RecognitionException {
         EObject current = null;
 
@@ -411,8 +593,8 @@ public class InternalOrch8Parser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalOrch8.g:184:48: (iv_ruleCommand= ruleCommand EOF )
-            // InternalOrch8.g:185:2: iv_ruleCommand= ruleCommand EOF
+            // InternalOrch8.g:238:48: (iv_ruleCommand= ruleCommand EOF )
+            // InternalOrch8.g:239:2: iv_ruleCommand= ruleCommand EOF
             {
              newCompositeNode(grammarAccess.getCommandRule()); 
             pushFollow(FOLLOW_1);
@@ -439,7 +621,7 @@ public class InternalOrch8Parser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleCommand"
-    // InternalOrch8.g:191:1: ruleCommand returns [EObject current=null] : (this_CmdTempo_0= ruleCmdTempo | this_CmdTimeSignature_1= ruleCmdTimeSignature | this_CmdPlay_2= ruleCmdPlay | this_CmdInstrument_3= ruleCmdInstrument | this_CmdSet_4= ruleCmdSet ) ;
+    // InternalOrch8.g:245:1: ruleCommand returns [EObject current=null] : (this_CmdTempo_0= ruleCmdTempo | this_CmdTimeSignature_1= ruleCmdTimeSignature | this_CmdPlay_2= ruleCmdPlay | this_CmdInstrument_3= ruleCmdInstrument | this_CmdSet_4= ruleCmdSet ) ;
     public final EObject ruleCommand() throws RecognitionException {
         EObject current = null;
 
@@ -458,47 +640,47 @@ public class InternalOrch8Parser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalOrch8.g:197:2: ( (this_CmdTempo_0= ruleCmdTempo | this_CmdTimeSignature_1= ruleCmdTimeSignature | this_CmdPlay_2= ruleCmdPlay | this_CmdInstrument_3= ruleCmdInstrument | this_CmdSet_4= ruleCmdSet ) )
-            // InternalOrch8.g:198:2: (this_CmdTempo_0= ruleCmdTempo | this_CmdTimeSignature_1= ruleCmdTimeSignature | this_CmdPlay_2= ruleCmdPlay | this_CmdInstrument_3= ruleCmdInstrument | this_CmdSet_4= ruleCmdSet )
+            // InternalOrch8.g:251:2: ( (this_CmdTempo_0= ruleCmdTempo | this_CmdTimeSignature_1= ruleCmdTimeSignature | this_CmdPlay_2= ruleCmdPlay | this_CmdInstrument_3= ruleCmdInstrument | this_CmdSet_4= ruleCmdSet ) )
+            // InternalOrch8.g:252:2: (this_CmdTempo_0= ruleCmdTempo | this_CmdTimeSignature_1= ruleCmdTimeSignature | this_CmdPlay_2= ruleCmdPlay | this_CmdInstrument_3= ruleCmdInstrument | this_CmdSet_4= ruleCmdSet )
             {
-            // InternalOrch8.g:198:2: (this_CmdTempo_0= ruleCmdTempo | this_CmdTimeSignature_1= ruleCmdTimeSignature | this_CmdPlay_2= ruleCmdPlay | this_CmdInstrument_3= ruleCmdInstrument | this_CmdSet_4= ruleCmdSet )
-            int alt3=5;
+            // InternalOrch8.g:252:2: (this_CmdTempo_0= ruleCmdTempo | this_CmdTimeSignature_1= ruleCmdTimeSignature | this_CmdPlay_2= ruleCmdPlay | this_CmdInstrument_3= ruleCmdInstrument | this_CmdSet_4= ruleCmdSet )
+            int alt4=5;
             switch ( input.LA(1) ) {
             case 30:
                 {
-                alt3=1;
+                alt4=1;
                 }
                 break;
             case 31:
                 {
-                alt3=2;
+                alt4=2;
                 }
                 break;
             case 28:
                 {
-                alt3=3;
+                alt4=3;
                 }
                 break;
             case 27:
                 {
-                alt3=4;
+                alt4=4;
                 }
                 break;
             case 33:
                 {
-                alt3=5;
+                alt4=5;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 3, 0, input);
+                    new NoViableAltException("", 4, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt3) {
+            switch (alt4) {
                 case 1 :
-                    // InternalOrch8.g:199:3: this_CmdTempo_0= ruleCmdTempo
+                    // InternalOrch8.g:253:3: this_CmdTempo_0= ruleCmdTempo
                     {
 
                     			newCompositeNode(grammarAccess.getCommandAccess().getCmdTempoParserRuleCall_0());
@@ -516,7 +698,7 @@ public class InternalOrch8Parser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalOrch8.g:208:3: this_CmdTimeSignature_1= ruleCmdTimeSignature
+                    // InternalOrch8.g:262:3: this_CmdTimeSignature_1= ruleCmdTimeSignature
                     {
 
                     			newCompositeNode(grammarAccess.getCommandAccess().getCmdTimeSignatureParserRuleCall_1());
@@ -534,7 +716,7 @@ public class InternalOrch8Parser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalOrch8.g:217:3: this_CmdPlay_2= ruleCmdPlay
+                    // InternalOrch8.g:271:3: this_CmdPlay_2= ruleCmdPlay
                     {
 
                     			newCompositeNode(grammarAccess.getCommandAccess().getCmdPlayParserRuleCall_2());
@@ -552,7 +734,7 @@ public class InternalOrch8Parser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // InternalOrch8.g:226:3: this_CmdInstrument_3= ruleCmdInstrument
+                    // InternalOrch8.g:280:3: this_CmdInstrument_3= ruleCmdInstrument
                     {
 
                     			newCompositeNode(grammarAccess.getCommandAccess().getCmdInstrumentParserRuleCall_3());
@@ -570,7 +752,7 @@ public class InternalOrch8Parser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // InternalOrch8.g:235:3: this_CmdSet_4= ruleCmdSet
+                    // InternalOrch8.g:289:3: this_CmdSet_4= ruleCmdSet
                     {
 
                     			newCompositeNode(grammarAccess.getCommandAccess().getCmdSetParserRuleCall_4());
@@ -610,7 +792,7 @@ public class InternalOrch8Parser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleMixer"
-    // InternalOrch8.g:247:1: entryRuleMixer returns [EObject current=null] : iv_ruleMixer= ruleMixer EOF ;
+    // InternalOrch8.g:301:1: entryRuleMixer returns [EObject current=null] : iv_ruleMixer= ruleMixer EOF ;
     public final EObject entryRuleMixer() throws RecognitionException {
         EObject current = null;
 
@@ -618,8 +800,8 @@ public class InternalOrch8Parser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalOrch8.g:247:46: (iv_ruleMixer= ruleMixer EOF )
-            // InternalOrch8.g:248:2: iv_ruleMixer= ruleMixer EOF
+            // InternalOrch8.g:301:46: (iv_ruleMixer= ruleMixer EOF )
+            // InternalOrch8.g:302:2: iv_ruleMixer= ruleMixer EOF
             {
              newCompositeNode(grammarAccess.getMixerRule()); 
             pushFollow(FOLLOW_1);
@@ -646,7 +828,7 @@ public class InternalOrch8Parser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleMixer"
-    // InternalOrch8.g:254:1: ruleMixer returns [EObject current=null] : (otherlv_0= 'Mixer' ( (lv_name_1_0= ruleEString ) ) otherlv_2= '{' (otherlv_3= 'sampling_rate' ( (lv_sampling_rate_4_0= ruleEInt ) ) )? otherlv_5= 'scores' otherlv_6= '{' ( ( ruleEString ) ) (otherlv_8= ',' ( ( ruleEString ) ) )* otherlv_10= '}' otherlv_11= '}' ) ;
+    // InternalOrch8.g:308:1: ruleMixer returns [EObject current=null] : (otherlv_0= 'Mixer' ( (lv_name_1_0= ruleEString ) ) otherlv_2= '{' (otherlv_3= 'sampling_rate' ( (lv_sampling_rate_4_0= ruleEInt ) ) )? otherlv_5= 'scores' otherlv_6= '{' ( ( ruleEString ) ) (otherlv_8= ',' ( ( ruleEString ) ) )* otherlv_10= '}' otherlv_11= '}' ) ;
     public final EObject ruleMixer() throws RecognitionException {
         EObject current = null;
 
@@ -667,21 +849,21 @@ public class InternalOrch8Parser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalOrch8.g:260:2: ( (otherlv_0= 'Mixer' ( (lv_name_1_0= ruleEString ) ) otherlv_2= '{' (otherlv_3= 'sampling_rate' ( (lv_sampling_rate_4_0= ruleEInt ) ) )? otherlv_5= 'scores' otherlv_6= '{' ( ( ruleEString ) ) (otherlv_8= ',' ( ( ruleEString ) ) )* otherlv_10= '}' otherlv_11= '}' ) )
-            // InternalOrch8.g:261:2: (otherlv_0= 'Mixer' ( (lv_name_1_0= ruleEString ) ) otherlv_2= '{' (otherlv_3= 'sampling_rate' ( (lv_sampling_rate_4_0= ruleEInt ) ) )? otherlv_5= 'scores' otherlv_6= '{' ( ( ruleEString ) ) (otherlv_8= ',' ( ( ruleEString ) ) )* otherlv_10= '}' otherlv_11= '}' )
+            // InternalOrch8.g:314:2: ( (otherlv_0= 'Mixer' ( (lv_name_1_0= ruleEString ) ) otherlv_2= '{' (otherlv_3= 'sampling_rate' ( (lv_sampling_rate_4_0= ruleEInt ) ) )? otherlv_5= 'scores' otherlv_6= '{' ( ( ruleEString ) ) (otherlv_8= ',' ( ( ruleEString ) ) )* otherlv_10= '}' otherlv_11= '}' ) )
+            // InternalOrch8.g:315:2: (otherlv_0= 'Mixer' ( (lv_name_1_0= ruleEString ) ) otherlv_2= '{' (otherlv_3= 'sampling_rate' ( (lv_sampling_rate_4_0= ruleEInt ) ) )? otherlv_5= 'scores' otherlv_6= '{' ( ( ruleEString ) ) (otherlv_8= ',' ( ( ruleEString ) ) )* otherlv_10= '}' otherlv_11= '}' )
             {
-            // InternalOrch8.g:261:2: (otherlv_0= 'Mixer' ( (lv_name_1_0= ruleEString ) ) otherlv_2= '{' (otherlv_3= 'sampling_rate' ( (lv_sampling_rate_4_0= ruleEInt ) ) )? otherlv_5= 'scores' otherlv_6= '{' ( ( ruleEString ) ) (otherlv_8= ',' ( ( ruleEString ) ) )* otherlv_10= '}' otherlv_11= '}' )
-            // InternalOrch8.g:262:3: otherlv_0= 'Mixer' ( (lv_name_1_0= ruleEString ) ) otherlv_2= '{' (otherlv_3= 'sampling_rate' ( (lv_sampling_rate_4_0= ruleEInt ) ) )? otherlv_5= 'scores' otherlv_6= '{' ( ( ruleEString ) ) (otherlv_8= ',' ( ( ruleEString ) ) )* otherlv_10= '}' otherlv_11= '}'
+            // InternalOrch8.g:315:2: (otherlv_0= 'Mixer' ( (lv_name_1_0= ruleEString ) ) otherlv_2= '{' (otherlv_3= 'sampling_rate' ( (lv_sampling_rate_4_0= ruleEInt ) ) )? otherlv_5= 'scores' otherlv_6= '{' ( ( ruleEString ) ) (otherlv_8= ',' ( ( ruleEString ) ) )* otherlv_10= '}' otherlv_11= '}' )
+            // InternalOrch8.g:316:3: otherlv_0= 'Mixer' ( (lv_name_1_0= ruleEString ) ) otherlv_2= '{' (otherlv_3= 'sampling_rate' ( (lv_sampling_rate_4_0= ruleEInt ) ) )? otherlv_5= 'scores' otherlv_6= '{' ( ( ruleEString ) ) (otherlv_8= ',' ( ( ruleEString ) ) )* otherlv_10= '}' otherlv_11= '}'
             {
             otherlv_0=(Token)match(input,12,FOLLOW_5); 
 
             			newLeafNode(otherlv_0, grammarAccess.getMixerAccess().getMixerKeyword_0());
             		
-            // InternalOrch8.g:266:3: ( (lv_name_1_0= ruleEString ) )
-            // InternalOrch8.g:267:4: (lv_name_1_0= ruleEString )
+            // InternalOrch8.g:320:3: ( (lv_name_1_0= ruleEString ) )
+            // InternalOrch8.g:321:4: (lv_name_1_0= ruleEString )
             {
-            // InternalOrch8.g:267:4: (lv_name_1_0= ruleEString )
-            // InternalOrch8.g:268:5: lv_name_1_0= ruleEString
+            // InternalOrch8.g:321:4: (lv_name_1_0= ruleEString )
+            // InternalOrch8.g:322:5: lv_name_1_0= ruleEString
             {
 
             					newCompositeNode(grammarAccess.getMixerAccess().getNameEStringParserRuleCall_1_0());
@@ -712,26 +894,26 @@ public class InternalOrch8Parser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_2, grammarAccess.getMixerAccess().getLeftCurlyBracketKeyword_2());
             		
-            // InternalOrch8.g:289:3: (otherlv_3= 'sampling_rate' ( (lv_sampling_rate_4_0= ruleEInt ) ) )?
-            int alt4=2;
-            int LA4_0 = input.LA(1);
+            // InternalOrch8.g:343:3: (otherlv_3= 'sampling_rate' ( (lv_sampling_rate_4_0= ruleEInt ) ) )?
+            int alt5=2;
+            int LA5_0 = input.LA(1);
 
-            if ( (LA4_0==14) ) {
-                alt4=1;
+            if ( (LA5_0==14) ) {
+                alt5=1;
             }
-            switch (alt4) {
+            switch (alt5) {
                 case 1 :
-                    // InternalOrch8.g:290:4: otherlv_3= 'sampling_rate' ( (lv_sampling_rate_4_0= ruleEInt ) )
+                    // InternalOrch8.g:344:4: otherlv_3= 'sampling_rate' ( (lv_sampling_rate_4_0= ruleEInt ) )
                     {
                     otherlv_3=(Token)match(input,14,FOLLOW_8); 
 
                     				newLeafNode(otherlv_3, grammarAccess.getMixerAccess().getSampling_rateKeyword_3_0());
                     			
-                    // InternalOrch8.g:294:4: ( (lv_sampling_rate_4_0= ruleEInt ) )
-                    // InternalOrch8.g:295:5: (lv_sampling_rate_4_0= ruleEInt )
+                    // InternalOrch8.g:348:4: ( (lv_sampling_rate_4_0= ruleEInt ) )
+                    // InternalOrch8.g:349:5: (lv_sampling_rate_4_0= ruleEInt )
                     {
-                    // InternalOrch8.g:295:5: (lv_sampling_rate_4_0= ruleEInt )
-                    // InternalOrch8.g:296:6: lv_sampling_rate_4_0= ruleEInt
+                    // InternalOrch8.g:349:5: (lv_sampling_rate_4_0= ruleEInt )
+                    // InternalOrch8.g:350:6: lv_sampling_rate_4_0= ruleEInt
                     {
 
                     						newCompositeNode(grammarAccess.getMixerAccess().getSampling_rateEIntParserRuleCall_3_1_0());
@@ -772,11 +954,11 @@ public class InternalOrch8Parser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_6, grammarAccess.getMixerAccess().getLeftCurlyBracketKeyword_5());
             		
-            // InternalOrch8.g:322:3: ( ( ruleEString ) )
-            // InternalOrch8.g:323:4: ( ruleEString )
+            // InternalOrch8.g:376:3: ( ( ruleEString ) )
+            // InternalOrch8.g:377:4: ( ruleEString )
             {
-            // InternalOrch8.g:323:4: ( ruleEString )
-            // InternalOrch8.g:324:5: ruleEString
+            // InternalOrch8.g:377:4: ( ruleEString )
+            // InternalOrch8.g:378:5: ruleEString
             {
 
             					if (current==null) {
@@ -800,30 +982,30 @@ public class InternalOrch8Parser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalOrch8.g:338:3: (otherlv_8= ',' ( ( ruleEString ) ) )*
-            loop5:
+            // InternalOrch8.g:392:3: (otherlv_8= ',' ( ( ruleEString ) ) )*
+            loop6:
             do {
-                int alt5=2;
-                int LA5_0 = input.LA(1);
+                int alt6=2;
+                int LA6_0 = input.LA(1);
 
-                if ( (LA5_0==16) ) {
-                    alt5=1;
+                if ( (LA6_0==16) ) {
+                    alt6=1;
                 }
 
 
-                switch (alt5) {
+                switch (alt6) {
             	case 1 :
-            	    // InternalOrch8.g:339:4: otherlv_8= ',' ( ( ruleEString ) )
+            	    // InternalOrch8.g:393:4: otherlv_8= ',' ( ( ruleEString ) )
             	    {
             	    otherlv_8=(Token)match(input,16,FOLLOW_5); 
 
             	    				newLeafNode(otherlv_8, grammarAccess.getMixerAccess().getCommaKeyword_7_0());
             	    			
-            	    // InternalOrch8.g:343:4: ( ( ruleEString ) )
-            	    // InternalOrch8.g:344:5: ( ruleEString )
+            	    // InternalOrch8.g:397:4: ( ( ruleEString ) )
+            	    // InternalOrch8.g:398:5: ( ruleEString )
             	    {
-            	    // InternalOrch8.g:344:5: ( ruleEString )
-            	    // InternalOrch8.g:345:6: ruleEString
+            	    // InternalOrch8.g:398:5: ( ruleEString )
+            	    // InternalOrch8.g:399:6: ruleEString
             	    {
 
             	    						if (current==null) {
@@ -852,7 +1034,7 @@ public class InternalOrch8Parser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop5;
+            	    break loop6;
                 }
             } while (true);
 
@@ -887,7 +1069,7 @@ public class InternalOrch8Parser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleScore"
-    // InternalOrch8.g:372:1: entryRuleScore returns [EObject current=null] : iv_ruleScore= ruleScore EOF ;
+    // InternalOrch8.g:426:1: entryRuleScore returns [EObject current=null] : iv_ruleScore= ruleScore EOF ;
     public final EObject entryRuleScore() throws RecognitionException {
         EObject current = null;
 
@@ -895,8 +1077,8 @@ public class InternalOrch8Parser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalOrch8.g:372:46: (iv_ruleScore= ruleScore EOF )
-            // InternalOrch8.g:373:2: iv_ruleScore= ruleScore EOF
+            // InternalOrch8.g:426:46: (iv_ruleScore= ruleScore EOF )
+            // InternalOrch8.g:427:2: iv_ruleScore= ruleScore EOF
             {
              newCompositeNode(grammarAccess.getScoreRule()); 
             pushFollow(FOLLOW_1);
@@ -923,7 +1105,7 @@ public class InternalOrch8Parser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleScore"
-    // InternalOrch8.g:379:1: ruleScore returns [EObject current=null] : (otherlv_0= 'Score' ( (lv_name_1_0= ruleEString ) ) otherlv_2= '{' (otherlv_3= '@Setup' ( (lv_setup_4_0= ruleCommand ) )* )? ( (lv_measures_5_0= ruleMeasure ) )+ (otherlv_6= '@End' ( (lv_end_7_0= ruleCommand ) )* )? otherlv_8= '}' ) ;
+    // InternalOrch8.g:433:1: ruleScore returns [EObject current=null] : (otherlv_0= 'Score' ( (lv_name_1_0= ruleEString ) ) otherlv_2= '{' (otherlv_3= '@Setup' ( (lv_setup_4_0= ruleSetupCommand ) )* )? ( (lv_measures_5_0= ruleMeasure ) )+ (otherlv_6= '@End' ( (lv_end_7_0= ruleSetupCommand ) )* )? otherlv_8= '}' ) ;
     public final EObject ruleScore() throws RecognitionException {
         EObject current = null;
 
@@ -945,21 +1127,21 @@ public class InternalOrch8Parser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalOrch8.g:385:2: ( (otherlv_0= 'Score' ( (lv_name_1_0= ruleEString ) ) otherlv_2= '{' (otherlv_3= '@Setup' ( (lv_setup_4_0= ruleCommand ) )* )? ( (lv_measures_5_0= ruleMeasure ) )+ (otherlv_6= '@End' ( (lv_end_7_0= ruleCommand ) )* )? otherlv_8= '}' ) )
-            // InternalOrch8.g:386:2: (otherlv_0= 'Score' ( (lv_name_1_0= ruleEString ) ) otherlv_2= '{' (otherlv_3= '@Setup' ( (lv_setup_4_0= ruleCommand ) )* )? ( (lv_measures_5_0= ruleMeasure ) )+ (otherlv_6= '@End' ( (lv_end_7_0= ruleCommand ) )* )? otherlv_8= '}' )
+            // InternalOrch8.g:439:2: ( (otherlv_0= 'Score' ( (lv_name_1_0= ruleEString ) ) otherlv_2= '{' (otherlv_3= '@Setup' ( (lv_setup_4_0= ruleSetupCommand ) )* )? ( (lv_measures_5_0= ruleMeasure ) )+ (otherlv_6= '@End' ( (lv_end_7_0= ruleSetupCommand ) )* )? otherlv_8= '}' ) )
+            // InternalOrch8.g:440:2: (otherlv_0= 'Score' ( (lv_name_1_0= ruleEString ) ) otherlv_2= '{' (otherlv_3= '@Setup' ( (lv_setup_4_0= ruleSetupCommand ) )* )? ( (lv_measures_5_0= ruleMeasure ) )+ (otherlv_6= '@End' ( (lv_end_7_0= ruleSetupCommand ) )* )? otherlv_8= '}' )
             {
-            // InternalOrch8.g:386:2: (otherlv_0= 'Score' ( (lv_name_1_0= ruleEString ) ) otherlv_2= '{' (otherlv_3= '@Setup' ( (lv_setup_4_0= ruleCommand ) )* )? ( (lv_measures_5_0= ruleMeasure ) )+ (otherlv_6= '@End' ( (lv_end_7_0= ruleCommand ) )* )? otherlv_8= '}' )
-            // InternalOrch8.g:387:3: otherlv_0= 'Score' ( (lv_name_1_0= ruleEString ) ) otherlv_2= '{' (otherlv_3= '@Setup' ( (lv_setup_4_0= ruleCommand ) )* )? ( (lv_measures_5_0= ruleMeasure ) )+ (otherlv_6= '@End' ( (lv_end_7_0= ruleCommand ) )* )? otherlv_8= '}'
+            // InternalOrch8.g:440:2: (otherlv_0= 'Score' ( (lv_name_1_0= ruleEString ) ) otherlv_2= '{' (otherlv_3= '@Setup' ( (lv_setup_4_0= ruleSetupCommand ) )* )? ( (lv_measures_5_0= ruleMeasure ) )+ (otherlv_6= '@End' ( (lv_end_7_0= ruleSetupCommand ) )* )? otherlv_8= '}' )
+            // InternalOrch8.g:441:3: otherlv_0= 'Score' ( (lv_name_1_0= ruleEString ) ) otherlv_2= '{' (otherlv_3= '@Setup' ( (lv_setup_4_0= ruleSetupCommand ) )* )? ( (lv_measures_5_0= ruleMeasure ) )+ (otherlv_6= '@End' ( (lv_end_7_0= ruleSetupCommand ) )* )? otherlv_8= '}'
             {
             otherlv_0=(Token)match(input,18,FOLLOW_5); 
 
             			newLeafNode(otherlv_0, grammarAccess.getScoreAccess().getScoreKeyword_0());
             		
-            // InternalOrch8.g:391:3: ( (lv_name_1_0= ruleEString ) )
-            // InternalOrch8.g:392:4: (lv_name_1_0= ruleEString )
+            // InternalOrch8.g:445:3: ( (lv_name_1_0= ruleEString ) )
+            // InternalOrch8.g:446:4: (lv_name_1_0= ruleEString )
             {
-            // InternalOrch8.g:392:4: (lv_name_1_0= ruleEString )
-            // InternalOrch8.g:393:5: lv_name_1_0= ruleEString
+            // InternalOrch8.g:446:4: (lv_name_1_0= ruleEString )
+            // InternalOrch8.g:447:5: lv_name_1_0= ruleEString
             {
 
             					newCompositeNode(grammarAccess.getScoreAccess().getNameEStringParserRuleCall_1_0());
@@ -990,44 +1172,44 @@ public class InternalOrch8Parser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_2, grammarAccess.getScoreAccess().getLeftCurlyBracketKeyword_2());
             		
-            // InternalOrch8.g:414:3: (otherlv_3= '@Setup' ( (lv_setup_4_0= ruleCommand ) )* )?
-            int alt7=2;
-            int LA7_0 = input.LA(1);
+            // InternalOrch8.g:468:3: (otherlv_3= '@Setup' ( (lv_setup_4_0= ruleSetupCommand ) )* )?
+            int alt8=2;
+            int LA8_0 = input.LA(1);
 
-            if ( (LA7_0==19) ) {
-                alt7=1;
+            if ( (LA8_0==19) ) {
+                alt8=1;
             }
-            switch (alt7) {
+            switch (alt8) {
                 case 1 :
-                    // InternalOrch8.g:415:4: otherlv_3= '@Setup' ( (lv_setup_4_0= ruleCommand ) )*
+                    // InternalOrch8.g:469:4: otherlv_3= '@Setup' ( (lv_setup_4_0= ruleSetupCommand ) )*
                     {
                     otherlv_3=(Token)match(input,19,FOLLOW_13); 
 
                     				newLeafNode(otherlv_3, grammarAccess.getScoreAccess().getSetupKeyword_3_0());
                     			
-                    // InternalOrch8.g:419:4: ( (lv_setup_4_0= ruleCommand ) )*
-                    loop6:
+                    // InternalOrch8.g:473:4: ( (lv_setup_4_0= ruleSetupCommand ) )*
+                    loop7:
                     do {
-                        int alt6=2;
-                        int LA6_0 = input.LA(1);
+                        int alt7=2;
+                        int LA7_0 = input.LA(1);
 
-                        if ( ((LA6_0>=27 && LA6_0<=28)||(LA6_0>=30 && LA6_0<=31)||LA6_0==33) ) {
-                            alt6=1;
+                        if ( (LA7_0==27||(LA7_0>=30 && LA7_0<=31)||LA7_0==33) ) {
+                            alt7=1;
                         }
 
 
-                        switch (alt6) {
+                        switch (alt7) {
                     	case 1 :
-                    	    // InternalOrch8.g:420:5: (lv_setup_4_0= ruleCommand )
+                    	    // InternalOrch8.g:474:5: (lv_setup_4_0= ruleSetupCommand )
                     	    {
-                    	    // InternalOrch8.g:420:5: (lv_setup_4_0= ruleCommand )
-                    	    // InternalOrch8.g:421:6: lv_setup_4_0= ruleCommand
+                    	    // InternalOrch8.g:474:5: (lv_setup_4_0= ruleSetupCommand )
+                    	    // InternalOrch8.g:475:6: lv_setup_4_0= ruleSetupCommand
                     	    {
 
-                    	    						newCompositeNode(grammarAccess.getScoreAccess().getSetupCommandParserRuleCall_3_1_0());
+                    	    						newCompositeNode(grammarAccess.getScoreAccess().getSetupSetupCommandParserRuleCall_3_1_0());
                     	    					
                     	    pushFollow(FOLLOW_13);
-                    	    lv_setup_4_0=ruleCommand();
+                    	    lv_setup_4_0=ruleSetupCommand();
 
                     	    state._fsp--;
 
@@ -1039,7 +1221,7 @@ public class InternalOrch8Parser extends AbstractInternalAntlrParser {
                     	    							current,
                     	    							"setup",
                     	    							lv_setup_4_0,
-                    	    							"org.xtext.orchestr8_test.Orch8.Command");
+                    	    							"org.xtext.orchestr8_test.Orch8.SetupCommand");
                     	    						afterParserOrEnumRuleCall();
                     	    					
 
@@ -1050,7 +1232,7 @@ public class InternalOrch8Parser extends AbstractInternalAntlrParser {
                     	    break;
 
                     	default :
-                    	    break loop6;
+                    	    break loop7;
                         }
                     } while (true);
 
@@ -1060,24 +1242,24 @@ public class InternalOrch8Parser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalOrch8.g:439:3: ( (lv_measures_5_0= ruleMeasure ) )+
-            int cnt8=0;
-            loop8:
+            // InternalOrch8.g:493:3: ( (lv_measures_5_0= ruleMeasure ) )+
+            int cnt9=0;
+            loop9:
             do {
-                int alt8=2;
-                int LA8_0 = input.LA(1);
+                int alt9=2;
+                int LA9_0 = input.LA(1);
 
-                if ( (LA8_0==26) ) {
-                    alt8=1;
+                if ( (LA9_0==26) ) {
+                    alt9=1;
                 }
 
 
-                switch (alt8) {
+                switch (alt9) {
             	case 1 :
-            	    // InternalOrch8.g:440:4: (lv_measures_5_0= ruleMeasure )
+            	    // InternalOrch8.g:494:4: (lv_measures_5_0= ruleMeasure )
             	    {
-            	    // InternalOrch8.g:440:4: (lv_measures_5_0= ruleMeasure )
-            	    // InternalOrch8.g:441:5: lv_measures_5_0= ruleMeasure
+            	    // InternalOrch8.g:494:4: (lv_measures_5_0= ruleMeasure )
+            	    // InternalOrch8.g:495:5: lv_measures_5_0= ruleMeasure
             	    {
 
             	    					newCompositeNode(grammarAccess.getScoreAccess().getMeasuresMeasureParserRuleCall_4_0());
@@ -1106,52 +1288,52 @@ public class InternalOrch8Parser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    if ( cnt8 >= 1 ) break loop8;
+            	    if ( cnt9 >= 1 ) break loop9;
                         EarlyExitException eee =
-                            new EarlyExitException(8, input);
+                            new EarlyExitException(9, input);
                         throw eee;
                 }
-                cnt8++;
+                cnt9++;
             } while (true);
 
-            // InternalOrch8.g:458:3: (otherlv_6= '@End' ( (lv_end_7_0= ruleCommand ) )* )?
-            int alt10=2;
-            int LA10_0 = input.LA(1);
+            // InternalOrch8.g:512:3: (otherlv_6= '@End' ( (lv_end_7_0= ruleSetupCommand ) )* )?
+            int alt11=2;
+            int LA11_0 = input.LA(1);
 
-            if ( (LA10_0==20) ) {
-                alt10=1;
+            if ( (LA11_0==20) ) {
+                alt11=1;
             }
-            switch (alt10) {
+            switch (alt11) {
                 case 1 :
-                    // InternalOrch8.g:459:4: otherlv_6= '@End' ( (lv_end_7_0= ruleCommand ) )*
+                    // InternalOrch8.g:513:4: otherlv_6= '@End' ( (lv_end_7_0= ruleSetupCommand ) )*
                     {
                     otherlv_6=(Token)match(input,20,FOLLOW_15); 
 
                     				newLeafNode(otherlv_6, grammarAccess.getScoreAccess().getEndKeyword_5_0());
                     			
-                    // InternalOrch8.g:463:4: ( (lv_end_7_0= ruleCommand ) )*
-                    loop9:
+                    // InternalOrch8.g:517:4: ( (lv_end_7_0= ruleSetupCommand ) )*
+                    loop10:
                     do {
-                        int alt9=2;
-                        int LA9_0 = input.LA(1);
+                        int alt10=2;
+                        int LA10_0 = input.LA(1);
 
-                        if ( ((LA9_0>=27 && LA9_0<=28)||(LA9_0>=30 && LA9_0<=31)||LA9_0==33) ) {
-                            alt9=1;
+                        if ( (LA10_0==27||(LA10_0>=30 && LA10_0<=31)||LA10_0==33) ) {
+                            alt10=1;
                         }
 
 
-                        switch (alt9) {
+                        switch (alt10) {
                     	case 1 :
-                    	    // InternalOrch8.g:464:5: (lv_end_7_0= ruleCommand )
+                    	    // InternalOrch8.g:518:5: (lv_end_7_0= ruleSetupCommand )
                     	    {
-                    	    // InternalOrch8.g:464:5: (lv_end_7_0= ruleCommand )
-                    	    // InternalOrch8.g:465:6: lv_end_7_0= ruleCommand
+                    	    // InternalOrch8.g:518:5: (lv_end_7_0= ruleSetupCommand )
+                    	    // InternalOrch8.g:519:6: lv_end_7_0= ruleSetupCommand
                     	    {
 
-                    	    						newCompositeNode(grammarAccess.getScoreAccess().getEndCommandParserRuleCall_5_1_0());
+                    	    						newCompositeNode(grammarAccess.getScoreAccess().getEndSetupCommandParserRuleCall_5_1_0());
                     	    					
                     	    pushFollow(FOLLOW_15);
-                    	    lv_end_7_0=ruleCommand();
+                    	    lv_end_7_0=ruleSetupCommand();
 
                     	    state._fsp--;
 
@@ -1163,7 +1345,7 @@ public class InternalOrch8Parser extends AbstractInternalAntlrParser {
                     	    							current,
                     	    							"end",
                     	    							lv_end_7_0,
-                    	    							"org.xtext.orchestr8_test.Orch8.Command");
+                    	    							"org.xtext.orchestr8_test.Orch8.SetupCommand");
                     	    						afterParserOrEnumRuleCall();
                     	    					
 
@@ -1174,7 +1356,7 @@ public class InternalOrch8Parser extends AbstractInternalAntlrParser {
                     	    break;
 
                     	default :
-                    	    break loop9;
+                    	    break loop10;
                         }
                     } while (true);
 
@@ -1211,7 +1393,7 @@ public class InternalOrch8Parser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleInstrument"
-    // InternalOrch8.g:491:1: entryRuleInstrument returns [EObject current=null] : iv_ruleInstrument= ruleInstrument EOF ;
+    // InternalOrch8.g:545:1: entryRuleInstrument returns [EObject current=null] : iv_ruleInstrument= ruleInstrument EOF ;
     public final EObject entryRuleInstrument() throws RecognitionException {
         EObject current = null;
 
@@ -1219,8 +1401,8 @@ public class InternalOrch8Parser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalOrch8.g:491:51: (iv_ruleInstrument= ruleInstrument EOF )
-            // InternalOrch8.g:492:2: iv_ruleInstrument= ruleInstrument EOF
+            // InternalOrch8.g:545:51: (iv_ruleInstrument= ruleInstrument EOF )
+            // InternalOrch8.g:546:2: iv_ruleInstrument= ruleInstrument EOF
             {
              newCompositeNode(grammarAccess.getInstrumentRule()); 
             pushFollow(FOLLOW_1);
@@ -1247,7 +1429,7 @@ public class InternalOrch8Parser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleInstrument"
-    // InternalOrch8.g:498:1: ruleInstrument returns [EObject current=null] : (otherlv_0= 'Instrument' ( (lv_name_1_0= ruleEString ) ) otherlv_2= '{' ( (lv_generator_3_0= ruleGenerator ) ) ( (lv_parameters_4_0= ruleParameter ) )* otherlv_5= '}' ) ;
+    // InternalOrch8.g:552:1: ruleInstrument returns [EObject current=null] : (otherlv_0= 'Instrument' ( (lv_name_1_0= ruleEString ) ) otherlv_2= '{' ( (lv_generator_3_0= ruleGenerator ) ) ( (lv_parameters_4_0= ruleParameter ) )* otherlv_5= '}' ) ;
     public final EObject ruleInstrument() throws RecognitionException {
         EObject current = null;
 
@@ -1265,21 +1447,21 @@ public class InternalOrch8Parser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalOrch8.g:504:2: ( (otherlv_0= 'Instrument' ( (lv_name_1_0= ruleEString ) ) otherlv_2= '{' ( (lv_generator_3_0= ruleGenerator ) ) ( (lv_parameters_4_0= ruleParameter ) )* otherlv_5= '}' ) )
-            // InternalOrch8.g:505:2: (otherlv_0= 'Instrument' ( (lv_name_1_0= ruleEString ) ) otherlv_2= '{' ( (lv_generator_3_0= ruleGenerator ) ) ( (lv_parameters_4_0= ruleParameter ) )* otherlv_5= '}' )
+            // InternalOrch8.g:558:2: ( (otherlv_0= 'Instrument' ( (lv_name_1_0= ruleEString ) ) otherlv_2= '{' ( (lv_generator_3_0= ruleGenerator ) ) ( (lv_parameters_4_0= ruleParameter ) )* otherlv_5= '}' ) )
+            // InternalOrch8.g:559:2: (otherlv_0= 'Instrument' ( (lv_name_1_0= ruleEString ) ) otherlv_2= '{' ( (lv_generator_3_0= ruleGenerator ) ) ( (lv_parameters_4_0= ruleParameter ) )* otherlv_5= '}' )
             {
-            // InternalOrch8.g:505:2: (otherlv_0= 'Instrument' ( (lv_name_1_0= ruleEString ) ) otherlv_2= '{' ( (lv_generator_3_0= ruleGenerator ) ) ( (lv_parameters_4_0= ruleParameter ) )* otherlv_5= '}' )
-            // InternalOrch8.g:506:3: otherlv_0= 'Instrument' ( (lv_name_1_0= ruleEString ) ) otherlv_2= '{' ( (lv_generator_3_0= ruleGenerator ) ) ( (lv_parameters_4_0= ruleParameter ) )* otherlv_5= '}'
+            // InternalOrch8.g:559:2: (otherlv_0= 'Instrument' ( (lv_name_1_0= ruleEString ) ) otherlv_2= '{' ( (lv_generator_3_0= ruleGenerator ) ) ( (lv_parameters_4_0= ruleParameter ) )* otherlv_5= '}' )
+            // InternalOrch8.g:560:3: otherlv_0= 'Instrument' ( (lv_name_1_0= ruleEString ) ) otherlv_2= '{' ( (lv_generator_3_0= ruleGenerator ) ) ( (lv_parameters_4_0= ruleParameter ) )* otherlv_5= '}'
             {
             otherlv_0=(Token)match(input,21,FOLLOW_5); 
 
             			newLeafNode(otherlv_0, grammarAccess.getInstrumentAccess().getInstrumentKeyword_0());
             		
-            // InternalOrch8.g:510:3: ( (lv_name_1_0= ruleEString ) )
-            // InternalOrch8.g:511:4: (lv_name_1_0= ruleEString )
+            // InternalOrch8.g:564:3: ( (lv_name_1_0= ruleEString ) )
+            // InternalOrch8.g:565:4: (lv_name_1_0= ruleEString )
             {
-            // InternalOrch8.g:511:4: (lv_name_1_0= ruleEString )
-            // InternalOrch8.g:512:5: lv_name_1_0= ruleEString
+            // InternalOrch8.g:565:4: (lv_name_1_0= ruleEString )
+            // InternalOrch8.g:566:5: lv_name_1_0= ruleEString
             {
 
             					newCompositeNode(grammarAccess.getInstrumentAccess().getNameEStringParserRuleCall_1_0());
@@ -1310,11 +1492,11 @@ public class InternalOrch8Parser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_2, grammarAccess.getInstrumentAccess().getLeftCurlyBracketKeyword_2());
             		
-            // InternalOrch8.g:533:3: ( (lv_generator_3_0= ruleGenerator ) )
-            // InternalOrch8.g:534:4: (lv_generator_3_0= ruleGenerator )
+            // InternalOrch8.g:587:3: ( (lv_generator_3_0= ruleGenerator ) )
+            // InternalOrch8.g:588:4: (lv_generator_3_0= ruleGenerator )
             {
-            // InternalOrch8.g:534:4: (lv_generator_3_0= ruleGenerator )
-            // InternalOrch8.g:535:5: lv_generator_3_0= ruleGenerator
+            // InternalOrch8.g:588:4: (lv_generator_3_0= ruleGenerator )
+            // InternalOrch8.g:589:5: lv_generator_3_0= ruleGenerator
             {
 
             					newCompositeNode(grammarAccess.getInstrumentAccess().getGeneratorGeneratorParserRuleCall_3_0());
@@ -1341,23 +1523,23 @@ public class InternalOrch8Parser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalOrch8.g:552:3: ( (lv_parameters_4_0= ruleParameter ) )*
-            loop11:
+            // InternalOrch8.g:606:3: ( (lv_parameters_4_0= ruleParameter ) )*
+            loop12:
             do {
-                int alt11=2;
-                int LA11_0 = input.LA(1);
+                int alt12=2;
+                int LA12_0 = input.LA(1);
 
-                if ( ((LA11_0>=RULE_STRING && LA11_0<=RULE_ID)) ) {
-                    alt11=1;
+                if ( ((LA12_0>=RULE_STRING && LA12_0<=RULE_ID)) ) {
+                    alt12=1;
                 }
 
 
-                switch (alt11) {
+                switch (alt12) {
             	case 1 :
-            	    // InternalOrch8.g:553:4: (lv_parameters_4_0= ruleParameter )
+            	    // InternalOrch8.g:607:4: (lv_parameters_4_0= ruleParameter )
             	    {
-            	    // InternalOrch8.g:553:4: (lv_parameters_4_0= ruleParameter )
-            	    // InternalOrch8.g:554:5: lv_parameters_4_0= ruleParameter
+            	    // InternalOrch8.g:607:4: (lv_parameters_4_0= ruleParameter )
+            	    // InternalOrch8.g:608:5: lv_parameters_4_0= ruleParameter
             	    {
 
             	    					newCompositeNode(grammarAccess.getInstrumentAccess().getParametersParameterParserRuleCall_4_0());
@@ -1386,7 +1568,7 @@ public class InternalOrch8Parser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop11;
+            	    break loop12;
                 }
             } while (true);
 
@@ -1417,7 +1599,7 @@ public class InternalOrch8Parser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleEString"
-    // InternalOrch8.g:579:1: entryRuleEString returns [String current=null] : iv_ruleEString= ruleEString EOF ;
+    // InternalOrch8.g:633:1: entryRuleEString returns [String current=null] : iv_ruleEString= ruleEString EOF ;
     public final String entryRuleEString() throws RecognitionException {
         String current = null;
 
@@ -1425,8 +1607,8 @@ public class InternalOrch8Parser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalOrch8.g:579:47: (iv_ruleEString= ruleEString EOF )
-            // InternalOrch8.g:580:2: iv_ruleEString= ruleEString EOF
+            // InternalOrch8.g:633:47: (iv_ruleEString= ruleEString EOF )
+            // InternalOrch8.g:634:2: iv_ruleEString= ruleEString EOF
             {
              newCompositeNode(grammarAccess.getEStringRule()); 
             pushFollow(FOLLOW_1);
@@ -1453,7 +1635,7 @@ public class InternalOrch8Parser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleEString"
-    // InternalOrch8.g:586:1: ruleEString returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_STRING_0= RULE_STRING | this_ID_1= RULE_ID ) ;
+    // InternalOrch8.g:640:1: ruleEString returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_STRING_0= RULE_STRING | this_ID_1= RULE_ID ) ;
     public final AntlrDatatypeRuleToken ruleEString() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -1464,28 +1646,28 @@ public class InternalOrch8Parser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalOrch8.g:592:2: ( (this_STRING_0= RULE_STRING | this_ID_1= RULE_ID ) )
-            // InternalOrch8.g:593:2: (this_STRING_0= RULE_STRING | this_ID_1= RULE_ID )
+            // InternalOrch8.g:646:2: ( (this_STRING_0= RULE_STRING | this_ID_1= RULE_ID ) )
+            // InternalOrch8.g:647:2: (this_STRING_0= RULE_STRING | this_ID_1= RULE_ID )
             {
-            // InternalOrch8.g:593:2: (this_STRING_0= RULE_STRING | this_ID_1= RULE_ID )
-            int alt12=2;
-            int LA12_0 = input.LA(1);
+            // InternalOrch8.g:647:2: (this_STRING_0= RULE_STRING | this_ID_1= RULE_ID )
+            int alt13=2;
+            int LA13_0 = input.LA(1);
 
-            if ( (LA12_0==RULE_STRING) ) {
-                alt12=1;
+            if ( (LA13_0==RULE_STRING) ) {
+                alt13=1;
             }
-            else if ( (LA12_0==RULE_ID) ) {
-                alt12=2;
+            else if ( (LA13_0==RULE_ID) ) {
+                alt13=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 12, 0, input);
+                    new NoViableAltException("", 13, 0, input);
 
                 throw nvae;
             }
-            switch (alt12) {
+            switch (alt13) {
                 case 1 :
-                    // InternalOrch8.g:594:3: this_STRING_0= RULE_STRING
+                    // InternalOrch8.g:648:3: this_STRING_0= RULE_STRING
                     {
                     this_STRING_0=(Token)match(input,RULE_STRING,FOLLOW_2); 
 
@@ -1498,7 +1680,7 @@ public class InternalOrch8Parser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalOrch8.g:602:3: this_ID_1= RULE_ID
+                    // InternalOrch8.g:656:3: this_ID_1= RULE_ID
                     {
                     this_ID_1=(Token)match(input,RULE_ID,FOLLOW_2); 
 
@@ -1533,7 +1715,7 @@ public class InternalOrch8Parser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleEInt"
-    // InternalOrch8.g:613:1: entryRuleEInt returns [String current=null] : iv_ruleEInt= ruleEInt EOF ;
+    // InternalOrch8.g:667:1: entryRuleEInt returns [String current=null] : iv_ruleEInt= ruleEInt EOF ;
     public final String entryRuleEInt() throws RecognitionException {
         String current = null;
 
@@ -1541,8 +1723,8 @@ public class InternalOrch8Parser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalOrch8.g:613:44: (iv_ruleEInt= ruleEInt EOF )
-            // InternalOrch8.g:614:2: iv_ruleEInt= ruleEInt EOF
+            // InternalOrch8.g:667:44: (iv_ruleEInt= ruleEInt EOF )
+            // InternalOrch8.g:668:2: iv_ruleEInt= ruleEInt EOF
             {
              newCompositeNode(grammarAccess.getEIntRule()); 
             pushFollow(FOLLOW_1);
@@ -1569,7 +1751,7 @@ public class InternalOrch8Parser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleEInt"
-    // InternalOrch8.g:620:1: ruleEInt returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : ( (kw= '-' )? this_INT_1= RULE_INT ) ;
+    // InternalOrch8.g:674:1: ruleEInt returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : ( (kw= '-' )? this_INT_1= RULE_INT ) ;
     public final AntlrDatatypeRuleToken ruleEInt() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -1580,22 +1762,22 @@ public class InternalOrch8Parser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalOrch8.g:626:2: ( ( (kw= '-' )? this_INT_1= RULE_INT ) )
-            // InternalOrch8.g:627:2: ( (kw= '-' )? this_INT_1= RULE_INT )
+            // InternalOrch8.g:680:2: ( ( (kw= '-' )? this_INT_1= RULE_INT ) )
+            // InternalOrch8.g:681:2: ( (kw= '-' )? this_INT_1= RULE_INT )
             {
-            // InternalOrch8.g:627:2: ( (kw= '-' )? this_INT_1= RULE_INT )
-            // InternalOrch8.g:628:3: (kw= '-' )? this_INT_1= RULE_INT
+            // InternalOrch8.g:681:2: ( (kw= '-' )? this_INT_1= RULE_INT )
+            // InternalOrch8.g:682:3: (kw= '-' )? this_INT_1= RULE_INT
             {
-            // InternalOrch8.g:628:3: (kw= '-' )?
-            int alt13=2;
-            int LA13_0 = input.LA(1);
+            // InternalOrch8.g:682:3: (kw= '-' )?
+            int alt14=2;
+            int LA14_0 = input.LA(1);
 
-            if ( (LA13_0==22) ) {
-                alt13=1;
+            if ( (LA14_0==22) ) {
+                alt14=1;
             }
-            switch (alt13) {
+            switch (alt14) {
                 case 1 :
-                    // InternalOrch8.g:629:4: kw= '-'
+                    // InternalOrch8.g:683:4: kw= '-'
                     {
                     kw=(Token)match(input,22,FOLLOW_18); 
 
@@ -1638,7 +1820,7 @@ public class InternalOrch8Parser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleEDouble"
-    // InternalOrch8.g:646:1: entryRuleEDouble returns [String current=null] : iv_ruleEDouble= ruleEDouble EOF ;
+    // InternalOrch8.g:700:1: entryRuleEDouble returns [String current=null] : iv_ruleEDouble= ruleEDouble EOF ;
     public final String entryRuleEDouble() throws RecognitionException {
         String current = null;
 
@@ -1646,8 +1828,8 @@ public class InternalOrch8Parser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalOrch8.g:646:47: (iv_ruleEDouble= ruleEDouble EOF )
-            // InternalOrch8.g:647:2: iv_ruleEDouble= ruleEDouble EOF
+            // InternalOrch8.g:700:47: (iv_ruleEDouble= ruleEDouble EOF )
+            // InternalOrch8.g:701:2: iv_ruleEDouble= ruleEDouble EOF
             {
              newCompositeNode(grammarAccess.getEDoubleRule()); 
             pushFollow(FOLLOW_1);
@@ -1674,7 +1856,7 @@ public class InternalOrch8Parser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleEDouble"
-    // InternalOrch8.g:653:1: ruleEDouble returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : ( (kw= '-' )? (this_INT_1= RULE_INT )? kw= '.' this_INT_3= RULE_INT ( (kw= 'E' | kw= 'e' ) (kw= '-' )? this_INT_7= RULE_INT )? ) ;
+    // InternalOrch8.g:707:1: ruleEDouble returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : ( (kw= '-' )? (this_INT_1= RULE_INT )? kw= '.' this_INT_3= RULE_INT ( (kw= 'E' | kw= 'e' ) (kw= '-' )? this_INT_7= RULE_INT )? ) ;
     public final AntlrDatatypeRuleToken ruleEDouble() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -1687,22 +1869,22 @@ public class InternalOrch8Parser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalOrch8.g:659:2: ( ( (kw= '-' )? (this_INT_1= RULE_INT )? kw= '.' this_INT_3= RULE_INT ( (kw= 'E' | kw= 'e' ) (kw= '-' )? this_INT_7= RULE_INT )? ) )
-            // InternalOrch8.g:660:2: ( (kw= '-' )? (this_INT_1= RULE_INT )? kw= '.' this_INT_3= RULE_INT ( (kw= 'E' | kw= 'e' ) (kw= '-' )? this_INT_7= RULE_INT )? )
+            // InternalOrch8.g:713:2: ( ( (kw= '-' )? (this_INT_1= RULE_INT )? kw= '.' this_INT_3= RULE_INT ( (kw= 'E' | kw= 'e' ) (kw= '-' )? this_INT_7= RULE_INT )? ) )
+            // InternalOrch8.g:714:2: ( (kw= '-' )? (this_INT_1= RULE_INT )? kw= '.' this_INT_3= RULE_INT ( (kw= 'E' | kw= 'e' ) (kw= '-' )? this_INT_7= RULE_INT )? )
             {
-            // InternalOrch8.g:660:2: ( (kw= '-' )? (this_INT_1= RULE_INT )? kw= '.' this_INT_3= RULE_INT ( (kw= 'E' | kw= 'e' ) (kw= '-' )? this_INT_7= RULE_INT )? )
-            // InternalOrch8.g:661:3: (kw= '-' )? (this_INT_1= RULE_INT )? kw= '.' this_INT_3= RULE_INT ( (kw= 'E' | kw= 'e' ) (kw= '-' )? this_INT_7= RULE_INT )?
+            // InternalOrch8.g:714:2: ( (kw= '-' )? (this_INT_1= RULE_INT )? kw= '.' this_INT_3= RULE_INT ( (kw= 'E' | kw= 'e' ) (kw= '-' )? this_INT_7= RULE_INT )? )
+            // InternalOrch8.g:715:3: (kw= '-' )? (this_INT_1= RULE_INT )? kw= '.' this_INT_3= RULE_INT ( (kw= 'E' | kw= 'e' ) (kw= '-' )? this_INT_7= RULE_INT )?
             {
-            // InternalOrch8.g:661:3: (kw= '-' )?
-            int alt14=2;
-            int LA14_0 = input.LA(1);
+            // InternalOrch8.g:715:3: (kw= '-' )?
+            int alt15=2;
+            int LA15_0 = input.LA(1);
 
-            if ( (LA14_0==22) ) {
-                alt14=1;
+            if ( (LA15_0==22) ) {
+                alt15=1;
             }
-            switch (alt14) {
+            switch (alt15) {
                 case 1 :
-                    // InternalOrch8.g:662:4: kw= '-'
+                    // InternalOrch8.g:716:4: kw= '-'
                     {
                     kw=(Token)match(input,22,FOLLOW_19); 
 
@@ -1715,16 +1897,16 @@ public class InternalOrch8Parser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalOrch8.g:668:3: (this_INT_1= RULE_INT )?
-            int alt15=2;
-            int LA15_0 = input.LA(1);
+            // InternalOrch8.g:722:3: (this_INT_1= RULE_INT )?
+            int alt16=2;
+            int LA16_0 = input.LA(1);
 
-            if ( (LA15_0==RULE_INT) ) {
-                alt15=1;
+            if ( (LA16_0==RULE_INT) ) {
+                alt16=1;
             }
-            switch (alt15) {
+            switch (alt16) {
                 case 1 :
-                    // InternalOrch8.g:669:4: this_INT_1= RULE_INT
+                    // InternalOrch8.g:723:4: this_INT_1= RULE_INT
                     {
                     this_INT_1=(Token)match(input,RULE_INT,FOLLOW_20); 
 
@@ -1751,36 +1933,36 @@ public class InternalOrch8Parser extends AbstractInternalAntlrParser {
 
             			newLeafNode(this_INT_3, grammarAccess.getEDoubleAccess().getINTTerminalRuleCall_3());
             		
-            // InternalOrch8.g:689:3: ( (kw= 'E' | kw= 'e' ) (kw= '-' )? this_INT_7= RULE_INT )?
-            int alt18=2;
-            int LA18_0 = input.LA(1);
+            // InternalOrch8.g:743:3: ( (kw= 'E' | kw= 'e' ) (kw= '-' )? this_INT_7= RULE_INT )?
+            int alt19=2;
+            int LA19_0 = input.LA(1);
 
-            if ( ((LA18_0>=24 && LA18_0<=25)) ) {
-                alt18=1;
+            if ( ((LA19_0>=24 && LA19_0<=25)) ) {
+                alt19=1;
             }
-            switch (alt18) {
+            switch (alt19) {
                 case 1 :
-                    // InternalOrch8.g:690:4: (kw= 'E' | kw= 'e' ) (kw= '-' )? this_INT_7= RULE_INT
+                    // InternalOrch8.g:744:4: (kw= 'E' | kw= 'e' ) (kw= '-' )? this_INT_7= RULE_INT
                     {
-                    // InternalOrch8.g:690:4: (kw= 'E' | kw= 'e' )
-                    int alt16=2;
-                    int LA16_0 = input.LA(1);
+                    // InternalOrch8.g:744:4: (kw= 'E' | kw= 'e' )
+                    int alt17=2;
+                    int LA17_0 = input.LA(1);
 
-                    if ( (LA16_0==24) ) {
-                        alt16=1;
+                    if ( (LA17_0==24) ) {
+                        alt17=1;
                     }
-                    else if ( (LA16_0==25) ) {
-                        alt16=2;
+                    else if ( (LA17_0==25) ) {
+                        alt17=2;
                     }
                     else {
                         NoViableAltException nvae =
-                            new NoViableAltException("", 16, 0, input);
+                            new NoViableAltException("", 17, 0, input);
 
                         throw nvae;
                     }
-                    switch (alt16) {
+                    switch (alt17) {
                         case 1 :
-                            // InternalOrch8.g:691:5: kw= 'E'
+                            // InternalOrch8.g:745:5: kw= 'E'
                             {
                             kw=(Token)match(input,24,FOLLOW_8); 
 
@@ -1791,7 +1973,7 @@ public class InternalOrch8Parser extends AbstractInternalAntlrParser {
                             }
                             break;
                         case 2 :
-                            // InternalOrch8.g:697:5: kw= 'e'
+                            // InternalOrch8.g:751:5: kw= 'e'
                             {
                             kw=(Token)match(input,25,FOLLOW_8); 
 
@@ -1804,16 +1986,16 @@ public class InternalOrch8Parser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // InternalOrch8.g:703:4: (kw= '-' )?
-                    int alt17=2;
-                    int LA17_0 = input.LA(1);
+                    // InternalOrch8.g:757:4: (kw= '-' )?
+                    int alt18=2;
+                    int LA18_0 = input.LA(1);
 
-                    if ( (LA17_0==22) ) {
-                        alt17=1;
+                    if ( (LA18_0==22) ) {
+                        alt18=1;
                     }
-                    switch (alt17) {
+                    switch (alt18) {
                         case 1 :
-                            // InternalOrch8.g:704:5: kw= '-'
+                            // InternalOrch8.g:758:5: kw= '-'
                             {
                             kw=(Token)match(input,22,FOLLOW_18); 
 
@@ -1862,7 +2044,7 @@ public class InternalOrch8Parser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleMeasure"
-    // InternalOrch8.g:722:1: entryRuleMeasure returns [EObject current=null] : iv_ruleMeasure= ruleMeasure EOF ;
+    // InternalOrch8.g:776:1: entryRuleMeasure returns [EObject current=null] : iv_ruleMeasure= ruleMeasure EOF ;
     public final EObject entryRuleMeasure() throws RecognitionException {
         EObject current = null;
 
@@ -1870,8 +2052,8 @@ public class InternalOrch8Parser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalOrch8.g:722:48: (iv_ruleMeasure= ruleMeasure EOF )
-            // InternalOrch8.g:723:2: iv_ruleMeasure= ruleMeasure EOF
+            // InternalOrch8.g:776:48: (iv_ruleMeasure= ruleMeasure EOF )
+            // InternalOrch8.g:777:2: iv_ruleMeasure= ruleMeasure EOF
             {
              newCompositeNode(grammarAccess.getMeasureRule()); 
             pushFollow(FOLLOW_1);
@@ -1898,7 +2080,7 @@ public class InternalOrch8Parser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleMeasure"
-    // InternalOrch8.g:729:1: ruleMeasure returns [EObject current=null] : ( () otherlv_1= '@' ( (lv_ID_2_0= ruleEInt ) ) ( (lv_beats_3_0= ruleBeat ) )+ ) ;
+    // InternalOrch8.g:783:1: ruleMeasure returns [EObject current=null] : ( () otherlv_1= '@' ( (lv_ID_2_0= ruleEInt ) ) ( (lv_beats_3_0= ruleBeat ) )+ ) ;
     public final EObject ruleMeasure() throws RecognitionException {
         EObject current = null;
 
@@ -1912,14 +2094,14 @@ public class InternalOrch8Parser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalOrch8.g:735:2: ( ( () otherlv_1= '@' ( (lv_ID_2_0= ruleEInt ) ) ( (lv_beats_3_0= ruleBeat ) )+ ) )
-            // InternalOrch8.g:736:2: ( () otherlv_1= '@' ( (lv_ID_2_0= ruleEInt ) ) ( (lv_beats_3_0= ruleBeat ) )+ )
+            // InternalOrch8.g:789:2: ( ( () otherlv_1= '@' ( (lv_ID_2_0= ruleEInt ) ) ( (lv_beats_3_0= ruleBeat ) )+ ) )
+            // InternalOrch8.g:790:2: ( () otherlv_1= '@' ( (lv_ID_2_0= ruleEInt ) ) ( (lv_beats_3_0= ruleBeat ) )+ )
             {
-            // InternalOrch8.g:736:2: ( () otherlv_1= '@' ( (lv_ID_2_0= ruleEInt ) ) ( (lv_beats_3_0= ruleBeat ) )+ )
-            // InternalOrch8.g:737:3: () otherlv_1= '@' ( (lv_ID_2_0= ruleEInt ) ) ( (lv_beats_3_0= ruleBeat ) )+
+            // InternalOrch8.g:790:2: ( () otherlv_1= '@' ( (lv_ID_2_0= ruleEInt ) ) ( (lv_beats_3_0= ruleBeat ) )+ )
+            // InternalOrch8.g:791:3: () otherlv_1= '@' ( (lv_ID_2_0= ruleEInt ) ) ( (lv_beats_3_0= ruleBeat ) )+
             {
-            // InternalOrch8.g:737:3: ()
-            // InternalOrch8.g:738:4: 
+            // InternalOrch8.g:791:3: ()
+            // InternalOrch8.g:792:4: 
             {
 
             				current = forceCreateModelElement(
@@ -1933,11 +2115,11 @@ public class InternalOrch8Parser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_1, grammarAccess.getMeasureAccess().getCommercialAtKeyword_1());
             		
-            // InternalOrch8.g:748:3: ( (lv_ID_2_0= ruleEInt ) )
-            // InternalOrch8.g:749:4: (lv_ID_2_0= ruleEInt )
+            // InternalOrch8.g:802:3: ( (lv_ID_2_0= ruleEInt ) )
+            // InternalOrch8.g:803:4: (lv_ID_2_0= ruleEInt )
             {
-            // InternalOrch8.g:749:4: (lv_ID_2_0= ruleEInt )
-            // InternalOrch8.g:750:5: lv_ID_2_0= ruleEInt
+            // InternalOrch8.g:803:4: (lv_ID_2_0= ruleEInt )
+            // InternalOrch8.g:804:5: lv_ID_2_0= ruleEInt
             {
 
             					newCompositeNode(grammarAccess.getMeasureAccess().getIDEIntParserRuleCall_2_0());
@@ -1964,24 +2146,24 @@ public class InternalOrch8Parser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalOrch8.g:767:3: ( (lv_beats_3_0= ruleBeat ) )+
-            int cnt19=0;
-            loop19:
+            // InternalOrch8.g:821:3: ( (lv_beats_3_0= ruleBeat ) )+
+            int cnt20=0;
+            loop20:
             do {
-                int alt19=2;
-                int LA19_0 = input.LA(1);
+                int alt20=2;
+                int LA20_0 = input.LA(1);
 
-                if ( (LA19_0==34) ) {
-                    alt19=1;
+                if ( (LA20_0==34) ) {
+                    alt20=1;
                 }
 
 
-                switch (alt19) {
+                switch (alt20) {
             	case 1 :
-            	    // InternalOrch8.g:768:4: (lv_beats_3_0= ruleBeat )
+            	    // InternalOrch8.g:822:4: (lv_beats_3_0= ruleBeat )
             	    {
-            	    // InternalOrch8.g:768:4: (lv_beats_3_0= ruleBeat )
-            	    // InternalOrch8.g:769:5: lv_beats_3_0= ruleBeat
+            	    // InternalOrch8.g:822:4: (lv_beats_3_0= ruleBeat )
+            	    // InternalOrch8.g:823:5: lv_beats_3_0= ruleBeat
             	    {
 
             	    					newCompositeNode(grammarAccess.getMeasureAccess().getBeatsBeatParserRuleCall_3_0());
@@ -2010,12 +2192,12 @@ public class InternalOrch8Parser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    if ( cnt19 >= 1 ) break loop19;
+            	    if ( cnt20 >= 1 ) break loop20;
                         EarlyExitException eee =
-                            new EarlyExitException(19, input);
+                            new EarlyExitException(20, input);
                         throw eee;
                 }
-                cnt19++;
+                cnt20++;
             } while (true);
 
 
@@ -2041,7 +2223,7 @@ public class InternalOrch8Parser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleCmdInstrument"
-    // InternalOrch8.g:790:1: entryRuleCmdInstrument returns [EObject current=null] : iv_ruleCmdInstrument= ruleCmdInstrument EOF ;
+    // InternalOrch8.g:844:1: entryRuleCmdInstrument returns [EObject current=null] : iv_ruleCmdInstrument= ruleCmdInstrument EOF ;
     public final EObject entryRuleCmdInstrument() throws RecognitionException {
         EObject current = null;
 
@@ -2049,8 +2231,8 @@ public class InternalOrch8Parser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalOrch8.g:790:54: (iv_ruleCmdInstrument= ruleCmdInstrument EOF )
-            // InternalOrch8.g:791:2: iv_ruleCmdInstrument= ruleCmdInstrument EOF
+            // InternalOrch8.g:844:54: (iv_ruleCmdInstrument= ruleCmdInstrument EOF )
+            // InternalOrch8.g:845:2: iv_ruleCmdInstrument= ruleCmdInstrument EOF
             {
              newCompositeNode(grammarAccess.getCmdInstrumentRule()); 
             pushFollow(FOLLOW_1);
@@ -2077,7 +2259,7 @@ public class InternalOrch8Parser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleCmdInstrument"
-    // InternalOrch8.g:797:1: ruleCmdInstrument returns [EObject current=null] : ( ( (lv_type_0_0= 'instrument' ) ) ( (lv_parameter_1_0= ruleParameter ) ) ) ;
+    // InternalOrch8.g:851:1: ruleCmdInstrument returns [EObject current=null] : ( ( (lv_type_0_0= 'instrument' ) ) ( (lv_parameter_1_0= ruleParameter ) ) ) ;
     public final EObject ruleCmdInstrument() throws RecognitionException {
         EObject current = null;
 
@@ -2089,17 +2271,17 @@ public class InternalOrch8Parser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalOrch8.g:803:2: ( ( ( (lv_type_0_0= 'instrument' ) ) ( (lv_parameter_1_0= ruleParameter ) ) ) )
-            // InternalOrch8.g:804:2: ( ( (lv_type_0_0= 'instrument' ) ) ( (lv_parameter_1_0= ruleParameter ) ) )
+            // InternalOrch8.g:857:2: ( ( ( (lv_type_0_0= 'instrument' ) ) ( (lv_parameter_1_0= ruleParameter ) ) ) )
+            // InternalOrch8.g:858:2: ( ( (lv_type_0_0= 'instrument' ) ) ( (lv_parameter_1_0= ruleParameter ) ) )
             {
-            // InternalOrch8.g:804:2: ( ( (lv_type_0_0= 'instrument' ) ) ( (lv_parameter_1_0= ruleParameter ) ) )
-            // InternalOrch8.g:805:3: ( (lv_type_0_0= 'instrument' ) ) ( (lv_parameter_1_0= ruleParameter ) )
+            // InternalOrch8.g:858:2: ( ( (lv_type_0_0= 'instrument' ) ) ( (lv_parameter_1_0= ruleParameter ) ) )
+            // InternalOrch8.g:859:3: ( (lv_type_0_0= 'instrument' ) ) ( (lv_parameter_1_0= ruleParameter ) )
             {
-            // InternalOrch8.g:805:3: ( (lv_type_0_0= 'instrument' ) )
-            // InternalOrch8.g:806:4: (lv_type_0_0= 'instrument' )
+            // InternalOrch8.g:859:3: ( (lv_type_0_0= 'instrument' ) )
+            // InternalOrch8.g:860:4: (lv_type_0_0= 'instrument' )
             {
-            // InternalOrch8.g:806:4: (lv_type_0_0= 'instrument' )
-            // InternalOrch8.g:807:5: lv_type_0_0= 'instrument'
+            // InternalOrch8.g:860:4: (lv_type_0_0= 'instrument' )
+            // InternalOrch8.g:861:5: lv_type_0_0= 'instrument'
             {
             lv_type_0_0=(Token)match(input,27,FOLLOW_5); 
 
@@ -2117,11 +2299,11 @@ public class InternalOrch8Parser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalOrch8.g:819:3: ( (lv_parameter_1_0= ruleParameter ) )
-            // InternalOrch8.g:820:4: (lv_parameter_1_0= ruleParameter )
+            // InternalOrch8.g:873:3: ( (lv_parameter_1_0= ruleParameter ) )
+            // InternalOrch8.g:874:4: (lv_parameter_1_0= ruleParameter )
             {
-            // InternalOrch8.g:820:4: (lv_parameter_1_0= ruleParameter )
-            // InternalOrch8.g:821:5: lv_parameter_1_0= ruleParameter
+            // InternalOrch8.g:874:4: (lv_parameter_1_0= ruleParameter )
+            // InternalOrch8.g:875:5: lv_parameter_1_0= ruleParameter
             {
 
             					newCompositeNode(grammarAccess.getCmdInstrumentAccess().getParameterParameterParserRuleCall_1_0());
@@ -2171,7 +2353,7 @@ public class InternalOrch8Parser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleCmdPlay"
-    // InternalOrch8.g:842:1: entryRuleCmdPlay returns [EObject current=null] : iv_ruleCmdPlay= ruleCmdPlay EOF ;
+    // InternalOrch8.g:896:1: entryRuleCmdPlay returns [EObject current=null] : iv_ruleCmdPlay= ruleCmdPlay EOF ;
     public final EObject entryRuleCmdPlay() throws RecognitionException {
         EObject current = null;
 
@@ -2179,8 +2361,8 @@ public class InternalOrch8Parser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalOrch8.g:842:48: (iv_ruleCmdPlay= ruleCmdPlay EOF )
-            // InternalOrch8.g:843:2: iv_ruleCmdPlay= ruleCmdPlay EOF
+            // InternalOrch8.g:896:48: (iv_ruleCmdPlay= ruleCmdPlay EOF )
+            // InternalOrch8.g:897:2: iv_ruleCmdPlay= ruleCmdPlay EOF
             {
              newCompositeNode(grammarAccess.getCmdPlayRule()); 
             pushFollow(FOLLOW_1);
@@ -2207,7 +2389,7 @@ public class InternalOrch8Parser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleCmdPlay"
-    // InternalOrch8.g:849:1: ruleCmdPlay returns [EObject current=null] : ( ( (lv_type_0_0= 'play' ) ) ( (lv_note_1_0= RULE_NOTE ) ) otherlv_2= 'length' ( (lv_length_3_0= ruleEDouble ) ) ) ;
+    // InternalOrch8.g:903:1: ruleCmdPlay returns [EObject current=null] : ( ( (lv_type_0_0= 'play' ) ) ( (lv_note_1_0= RULE_NOTE ) ) otherlv_2= 'length' ( (lv_length_3_0= ruleEDouble ) ) ) ;
     public final EObject ruleCmdPlay() throws RecognitionException {
         EObject current = null;
 
@@ -2221,17 +2403,17 @@ public class InternalOrch8Parser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalOrch8.g:855:2: ( ( ( (lv_type_0_0= 'play' ) ) ( (lv_note_1_0= RULE_NOTE ) ) otherlv_2= 'length' ( (lv_length_3_0= ruleEDouble ) ) ) )
-            // InternalOrch8.g:856:2: ( ( (lv_type_0_0= 'play' ) ) ( (lv_note_1_0= RULE_NOTE ) ) otherlv_2= 'length' ( (lv_length_3_0= ruleEDouble ) ) )
+            // InternalOrch8.g:909:2: ( ( ( (lv_type_0_0= 'play' ) ) ( (lv_note_1_0= RULE_NOTE ) ) otherlv_2= 'length' ( (lv_length_3_0= ruleEDouble ) ) ) )
+            // InternalOrch8.g:910:2: ( ( (lv_type_0_0= 'play' ) ) ( (lv_note_1_0= RULE_NOTE ) ) otherlv_2= 'length' ( (lv_length_3_0= ruleEDouble ) ) )
             {
-            // InternalOrch8.g:856:2: ( ( (lv_type_0_0= 'play' ) ) ( (lv_note_1_0= RULE_NOTE ) ) otherlv_2= 'length' ( (lv_length_3_0= ruleEDouble ) ) )
-            // InternalOrch8.g:857:3: ( (lv_type_0_0= 'play' ) ) ( (lv_note_1_0= RULE_NOTE ) ) otherlv_2= 'length' ( (lv_length_3_0= ruleEDouble ) )
+            // InternalOrch8.g:910:2: ( ( (lv_type_0_0= 'play' ) ) ( (lv_note_1_0= RULE_NOTE ) ) otherlv_2= 'length' ( (lv_length_3_0= ruleEDouble ) ) )
+            // InternalOrch8.g:911:3: ( (lv_type_0_0= 'play' ) ) ( (lv_note_1_0= RULE_NOTE ) ) otherlv_2= 'length' ( (lv_length_3_0= ruleEDouble ) )
             {
-            // InternalOrch8.g:857:3: ( (lv_type_0_0= 'play' ) )
-            // InternalOrch8.g:858:4: (lv_type_0_0= 'play' )
+            // InternalOrch8.g:911:3: ( (lv_type_0_0= 'play' ) )
+            // InternalOrch8.g:912:4: (lv_type_0_0= 'play' )
             {
-            // InternalOrch8.g:858:4: (lv_type_0_0= 'play' )
-            // InternalOrch8.g:859:5: lv_type_0_0= 'play'
+            // InternalOrch8.g:912:4: (lv_type_0_0= 'play' )
+            // InternalOrch8.g:913:5: lv_type_0_0= 'play'
             {
             lv_type_0_0=(Token)match(input,28,FOLLOW_24); 
 
@@ -2249,11 +2431,11 @@ public class InternalOrch8Parser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalOrch8.g:871:3: ( (lv_note_1_0= RULE_NOTE ) )
-            // InternalOrch8.g:872:4: (lv_note_1_0= RULE_NOTE )
+            // InternalOrch8.g:925:3: ( (lv_note_1_0= RULE_NOTE ) )
+            // InternalOrch8.g:926:4: (lv_note_1_0= RULE_NOTE )
             {
-            // InternalOrch8.g:872:4: (lv_note_1_0= RULE_NOTE )
-            // InternalOrch8.g:873:5: lv_note_1_0= RULE_NOTE
+            // InternalOrch8.g:926:4: (lv_note_1_0= RULE_NOTE )
+            // InternalOrch8.g:927:5: lv_note_1_0= RULE_NOTE
             {
             lv_note_1_0=(Token)match(input,RULE_NOTE,FOLLOW_25); 
 
@@ -2279,11 +2461,11 @@ public class InternalOrch8Parser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_2, grammarAccess.getCmdPlayAccess().getLengthKeyword_2());
             		
-            // InternalOrch8.g:893:3: ( (lv_length_3_0= ruleEDouble ) )
-            // InternalOrch8.g:894:4: (lv_length_3_0= ruleEDouble )
+            // InternalOrch8.g:947:3: ( (lv_length_3_0= ruleEDouble ) )
+            // InternalOrch8.g:948:4: (lv_length_3_0= ruleEDouble )
             {
-            // InternalOrch8.g:894:4: (lv_length_3_0= ruleEDouble )
-            // InternalOrch8.g:895:5: lv_length_3_0= ruleEDouble
+            // InternalOrch8.g:948:4: (lv_length_3_0= ruleEDouble )
+            // InternalOrch8.g:949:5: lv_length_3_0= ruleEDouble
             {
 
             					newCompositeNode(grammarAccess.getCmdPlayAccess().getLengthEDoubleParserRuleCall_3_0());
@@ -2333,7 +2515,7 @@ public class InternalOrch8Parser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleCmdTempo"
-    // InternalOrch8.g:916:1: entryRuleCmdTempo returns [EObject current=null] : iv_ruleCmdTempo= ruleCmdTempo EOF ;
+    // InternalOrch8.g:970:1: entryRuleCmdTempo returns [EObject current=null] : iv_ruleCmdTempo= ruleCmdTempo EOF ;
     public final EObject entryRuleCmdTempo() throws RecognitionException {
         EObject current = null;
 
@@ -2341,8 +2523,8 @@ public class InternalOrch8Parser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalOrch8.g:916:49: (iv_ruleCmdTempo= ruleCmdTempo EOF )
-            // InternalOrch8.g:917:2: iv_ruleCmdTempo= ruleCmdTempo EOF
+            // InternalOrch8.g:970:49: (iv_ruleCmdTempo= ruleCmdTempo EOF )
+            // InternalOrch8.g:971:2: iv_ruleCmdTempo= ruleCmdTempo EOF
             {
              newCompositeNode(grammarAccess.getCmdTempoRule()); 
             pushFollow(FOLLOW_1);
@@ -2369,7 +2551,7 @@ public class InternalOrch8Parser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleCmdTempo"
-    // InternalOrch8.g:923:1: ruleCmdTempo returns [EObject current=null] : ( ( (lv_type_0_0= 'tempo' ) ) ( (lv_bpm_1_0= ruleEInt ) ) ) ;
+    // InternalOrch8.g:977:1: ruleCmdTempo returns [EObject current=null] : ( ( (lv_type_0_0= 'tempo' ) ) ( (lv_bpm_1_0= ruleEInt ) ) ) ;
     public final EObject ruleCmdTempo() throws RecognitionException {
         EObject current = null;
 
@@ -2381,17 +2563,17 @@ public class InternalOrch8Parser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalOrch8.g:929:2: ( ( ( (lv_type_0_0= 'tempo' ) ) ( (lv_bpm_1_0= ruleEInt ) ) ) )
-            // InternalOrch8.g:930:2: ( ( (lv_type_0_0= 'tempo' ) ) ( (lv_bpm_1_0= ruleEInt ) ) )
+            // InternalOrch8.g:983:2: ( ( ( (lv_type_0_0= 'tempo' ) ) ( (lv_bpm_1_0= ruleEInt ) ) ) )
+            // InternalOrch8.g:984:2: ( ( (lv_type_0_0= 'tempo' ) ) ( (lv_bpm_1_0= ruleEInt ) ) )
             {
-            // InternalOrch8.g:930:2: ( ( (lv_type_0_0= 'tempo' ) ) ( (lv_bpm_1_0= ruleEInt ) ) )
-            // InternalOrch8.g:931:3: ( (lv_type_0_0= 'tempo' ) ) ( (lv_bpm_1_0= ruleEInt ) )
+            // InternalOrch8.g:984:2: ( ( (lv_type_0_0= 'tempo' ) ) ( (lv_bpm_1_0= ruleEInt ) ) )
+            // InternalOrch8.g:985:3: ( (lv_type_0_0= 'tempo' ) ) ( (lv_bpm_1_0= ruleEInt ) )
             {
-            // InternalOrch8.g:931:3: ( (lv_type_0_0= 'tempo' ) )
-            // InternalOrch8.g:932:4: (lv_type_0_0= 'tempo' )
+            // InternalOrch8.g:985:3: ( (lv_type_0_0= 'tempo' ) )
+            // InternalOrch8.g:986:4: (lv_type_0_0= 'tempo' )
             {
-            // InternalOrch8.g:932:4: (lv_type_0_0= 'tempo' )
-            // InternalOrch8.g:933:5: lv_type_0_0= 'tempo'
+            // InternalOrch8.g:986:4: (lv_type_0_0= 'tempo' )
+            // InternalOrch8.g:987:5: lv_type_0_0= 'tempo'
             {
             lv_type_0_0=(Token)match(input,30,FOLLOW_8); 
 
@@ -2409,11 +2591,11 @@ public class InternalOrch8Parser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalOrch8.g:945:3: ( (lv_bpm_1_0= ruleEInt ) )
-            // InternalOrch8.g:946:4: (lv_bpm_1_0= ruleEInt )
+            // InternalOrch8.g:999:3: ( (lv_bpm_1_0= ruleEInt ) )
+            // InternalOrch8.g:1000:4: (lv_bpm_1_0= ruleEInt )
             {
-            // InternalOrch8.g:946:4: (lv_bpm_1_0= ruleEInt )
-            // InternalOrch8.g:947:5: lv_bpm_1_0= ruleEInt
+            // InternalOrch8.g:1000:4: (lv_bpm_1_0= ruleEInt )
+            // InternalOrch8.g:1001:5: lv_bpm_1_0= ruleEInt
             {
 
             					newCompositeNode(grammarAccess.getCmdTempoAccess().getBpmEIntParserRuleCall_1_0());
@@ -2463,7 +2645,7 @@ public class InternalOrch8Parser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleCmdTimeSignature"
-    // InternalOrch8.g:968:1: entryRuleCmdTimeSignature returns [EObject current=null] : iv_ruleCmdTimeSignature= ruleCmdTimeSignature EOF ;
+    // InternalOrch8.g:1022:1: entryRuleCmdTimeSignature returns [EObject current=null] : iv_ruleCmdTimeSignature= ruleCmdTimeSignature EOF ;
     public final EObject entryRuleCmdTimeSignature() throws RecognitionException {
         EObject current = null;
 
@@ -2471,8 +2653,8 @@ public class InternalOrch8Parser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalOrch8.g:968:57: (iv_ruleCmdTimeSignature= ruleCmdTimeSignature EOF )
-            // InternalOrch8.g:969:2: iv_ruleCmdTimeSignature= ruleCmdTimeSignature EOF
+            // InternalOrch8.g:1022:57: (iv_ruleCmdTimeSignature= ruleCmdTimeSignature EOF )
+            // InternalOrch8.g:1023:2: iv_ruleCmdTimeSignature= ruleCmdTimeSignature EOF
             {
              newCompositeNode(grammarAccess.getCmdTimeSignatureRule()); 
             pushFollow(FOLLOW_1);
@@ -2499,7 +2681,7 @@ public class InternalOrch8Parser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleCmdTimeSignature"
-    // InternalOrch8.g:975:1: ruleCmdTimeSignature returns [EObject current=null] : ( ( (lv_type_0_0= 'time_signature' ) ) ( (lv_numerator_1_0= ruleEInt ) ) otherlv_2= '/' ( (lv_denominator_3_0= ruleEInt ) ) ) ;
+    // InternalOrch8.g:1029:1: ruleCmdTimeSignature returns [EObject current=null] : ( ( (lv_type_0_0= 'time_signature' ) ) ( (lv_numerator_1_0= ruleEInt ) ) otherlv_2= '/' ( (lv_denominator_3_0= ruleEInt ) ) ) ;
     public final EObject ruleCmdTimeSignature() throws RecognitionException {
         EObject current = null;
 
@@ -2514,17 +2696,17 @@ public class InternalOrch8Parser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalOrch8.g:981:2: ( ( ( (lv_type_0_0= 'time_signature' ) ) ( (lv_numerator_1_0= ruleEInt ) ) otherlv_2= '/' ( (lv_denominator_3_0= ruleEInt ) ) ) )
-            // InternalOrch8.g:982:2: ( ( (lv_type_0_0= 'time_signature' ) ) ( (lv_numerator_1_0= ruleEInt ) ) otherlv_2= '/' ( (lv_denominator_3_0= ruleEInt ) ) )
+            // InternalOrch8.g:1035:2: ( ( ( (lv_type_0_0= 'time_signature' ) ) ( (lv_numerator_1_0= ruleEInt ) ) otherlv_2= '/' ( (lv_denominator_3_0= ruleEInt ) ) ) )
+            // InternalOrch8.g:1036:2: ( ( (lv_type_0_0= 'time_signature' ) ) ( (lv_numerator_1_0= ruleEInt ) ) otherlv_2= '/' ( (lv_denominator_3_0= ruleEInt ) ) )
             {
-            // InternalOrch8.g:982:2: ( ( (lv_type_0_0= 'time_signature' ) ) ( (lv_numerator_1_0= ruleEInt ) ) otherlv_2= '/' ( (lv_denominator_3_0= ruleEInt ) ) )
-            // InternalOrch8.g:983:3: ( (lv_type_0_0= 'time_signature' ) ) ( (lv_numerator_1_0= ruleEInt ) ) otherlv_2= '/' ( (lv_denominator_3_0= ruleEInt ) )
+            // InternalOrch8.g:1036:2: ( ( (lv_type_0_0= 'time_signature' ) ) ( (lv_numerator_1_0= ruleEInt ) ) otherlv_2= '/' ( (lv_denominator_3_0= ruleEInt ) ) )
+            // InternalOrch8.g:1037:3: ( (lv_type_0_0= 'time_signature' ) ) ( (lv_numerator_1_0= ruleEInt ) ) otherlv_2= '/' ( (lv_denominator_3_0= ruleEInt ) )
             {
-            // InternalOrch8.g:983:3: ( (lv_type_0_0= 'time_signature' ) )
-            // InternalOrch8.g:984:4: (lv_type_0_0= 'time_signature' )
+            // InternalOrch8.g:1037:3: ( (lv_type_0_0= 'time_signature' ) )
+            // InternalOrch8.g:1038:4: (lv_type_0_0= 'time_signature' )
             {
-            // InternalOrch8.g:984:4: (lv_type_0_0= 'time_signature' )
-            // InternalOrch8.g:985:5: lv_type_0_0= 'time_signature'
+            // InternalOrch8.g:1038:4: (lv_type_0_0= 'time_signature' )
+            // InternalOrch8.g:1039:5: lv_type_0_0= 'time_signature'
             {
             lv_type_0_0=(Token)match(input,31,FOLLOW_8); 
 
@@ -2542,11 +2724,11 @@ public class InternalOrch8Parser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalOrch8.g:997:3: ( (lv_numerator_1_0= ruleEInt ) )
-            // InternalOrch8.g:998:4: (lv_numerator_1_0= ruleEInt )
+            // InternalOrch8.g:1051:3: ( (lv_numerator_1_0= ruleEInt ) )
+            // InternalOrch8.g:1052:4: (lv_numerator_1_0= ruleEInt )
             {
-            // InternalOrch8.g:998:4: (lv_numerator_1_0= ruleEInt )
-            // InternalOrch8.g:999:5: lv_numerator_1_0= ruleEInt
+            // InternalOrch8.g:1052:4: (lv_numerator_1_0= ruleEInt )
+            // InternalOrch8.g:1053:5: lv_numerator_1_0= ruleEInt
             {
 
             					newCompositeNode(grammarAccess.getCmdTimeSignatureAccess().getNumeratorEIntParserRuleCall_1_0());
@@ -2577,11 +2759,11 @@ public class InternalOrch8Parser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_2, grammarAccess.getCmdTimeSignatureAccess().getSolidusKeyword_2());
             		
-            // InternalOrch8.g:1020:3: ( (lv_denominator_3_0= ruleEInt ) )
-            // InternalOrch8.g:1021:4: (lv_denominator_3_0= ruleEInt )
+            // InternalOrch8.g:1074:3: ( (lv_denominator_3_0= ruleEInt ) )
+            // InternalOrch8.g:1075:4: (lv_denominator_3_0= ruleEInt )
             {
-            // InternalOrch8.g:1021:4: (lv_denominator_3_0= ruleEInt )
-            // InternalOrch8.g:1022:5: lv_denominator_3_0= ruleEInt
+            // InternalOrch8.g:1075:4: (lv_denominator_3_0= ruleEInt )
+            // InternalOrch8.g:1076:5: lv_denominator_3_0= ruleEInt
             {
 
             					newCompositeNode(grammarAccess.getCmdTimeSignatureAccess().getDenominatorEIntParserRuleCall_3_0());
@@ -2631,7 +2813,7 @@ public class InternalOrch8Parser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleCmdSet"
-    // InternalOrch8.g:1043:1: entryRuleCmdSet returns [EObject current=null] : iv_ruleCmdSet= ruleCmdSet EOF ;
+    // InternalOrch8.g:1097:1: entryRuleCmdSet returns [EObject current=null] : iv_ruleCmdSet= ruleCmdSet EOF ;
     public final EObject entryRuleCmdSet() throws RecognitionException {
         EObject current = null;
 
@@ -2639,8 +2821,8 @@ public class InternalOrch8Parser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalOrch8.g:1043:47: (iv_ruleCmdSet= ruleCmdSet EOF )
-            // InternalOrch8.g:1044:2: iv_ruleCmdSet= ruleCmdSet EOF
+            // InternalOrch8.g:1097:47: (iv_ruleCmdSet= ruleCmdSet EOF )
+            // InternalOrch8.g:1098:2: iv_ruleCmdSet= ruleCmdSet EOF
             {
              newCompositeNode(grammarAccess.getCmdSetRule()); 
             pushFollow(FOLLOW_1);
@@ -2667,7 +2849,7 @@ public class InternalOrch8Parser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleCmdSet"
-    // InternalOrch8.g:1050:1: ruleCmdSet returns [EObject current=null] : ( ( (lv_type_0_0= 'set' ) ) ( ( ruleEString ) ) ) ;
+    // InternalOrch8.g:1104:1: ruleCmdSet returns [EObject current=null] : ( ( (lv_type_0_0= 'set' ) ) ( ( ruleEString ) ) ) ;
     public final EObject ruleCmdSet() throws RecognitionException {
         EObject current = null;
 
@@ -2677,17 +2859,17 @@ public class InternalOrch8Parser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalOrch8.g:1056:2: ( ( ( (lv_type_0_0= 'set' ) ) ( ( ruleEString ) ) ) )
-            // InternalOrch8.g:1057:2: ( ( (lv_type_0_0= 'set' ) ) ( ( ruleEString ) ) )
+            // InternalOrch8.g:1110:2: ( ( ( (lv_type_0_0= 'set' ) ) ( ( ruleEString ) ) ) )
+            // InternalOrch8.g:1111:2: ( ( (lv_type_0_0= 'set' ) ) ( ( ruleEString ) ) )
             {
-            // InternalOrch8.g:1057:2: ( ( (lv_type_0_0= 'set' ) ) ( ( ruleEString ) ) )
-            // InternalOrch8.g:1058:3: ( (lv_type_0_0= 'set' ) ) ( ( ruleEString ) )
+            // InternalOrch8.g:1111:2: ( ( (lv_type_0_0= 'set' ) ) ( ( ruleEString ) ) )
+            // InternalOrch8.g:1112:3: ( (lv_type_0_0= 'set' ) ) ( ( ruleEString ) )
             {
-            // InternalOrch8.g:1058:3: ( (lv_type_0_0= 'set' ) )
-            // InternalOrch8.g:1059:4: (lv_type_0_0= 'set' )
+            // InternalOrch8.g:1112:3: ( (lv_type_0_0= 'set' ) )
+            // InternalOrch8.g:1113:4: (lv_type_0_0= 'set' )
             {
-            // InternalOrch8.g:1059:4: (lv_type_0_0= 'set' )
-            // InternalOrch8.g:1060:5: lv_type_0_0= 'set'
+            // InternalOrch8.g:1113:4: (lv_type_0_0= 'set' )
+            // InternalOrch8.g:1114:5: lv_type_0_0= 'set'
             {
             lv_type_0_0=(Token)match(input,33,FOLLOW_5); 
 
@@ -2705,11 +2887,11 @@ public class InternalOrch8Parser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalOrch8.g:1072:3: ( ( ruleEString ) )
-            // InternalOrch8.g:1073:4: ( ruleEString )
+            // InternalOrch8.g:1126:3: ( ( ruleEString ) )
+            // InternalOrch8.g:1127:4: ( ruleEString )
             {
-            // InternalOrch8.g:1073:4: ( ruleEString )
-            // InternalOrch8.g:1074:5: ruleEString
+            // InternalOrch8.g:1127:4: ( ruleEString )
+            // InternalOrch8.g:1128:5: ruleEString
             {
 
             					if (current==null) {
@@ -2756,7 +2938,7 @@ public class InternalOrch8Parser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleParameter"
-    // InternalOrch8.g:1092:1: entryRuleParameter returns [EObject current=null] : iv_ruleParameter= ruleParameter EOF ;
+    // InternalOrch8.g:1146:1: entryRuleParameter returns [EObject current=null] : iv_ruleParameter= ruleParameter EOF ;
     public final EObject entryRuleParameter() throws RecognitionException {
         EObject current = null;
 
@@ -2764,8 +2946,8 @@ public class InternalOrch8Parser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalOrch8.g:1092:50: (iv_ruleParameter= ruleParameter EOF )
-            // InternalOrch8.g:1093:2: iv_ruleParameter= ruleParameter EOF
+            // InternalOrch8.g:1146:50: (iv_ruleParameter= ruleParameter EOF )
+            // InternalOrch8.g:1147:2: iv_ruleParameter= ruleParameter EOF
             {
              newCompositeNode(grammarAccess.getParameterRule()); 
             pushFollow(FOLLOW_1);
@@ -2792,7 +2974,7 @@ public class InternalOrch8Parser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleParameter"
-    // InternalOrch8.g:1099:1: ruleParameter returns [EObject current=null] : ( ( (lv_ID_0_0= ruleEString ) ) ( (lv_value_1_0= ruleEDouble ) ) ) ;
+    // InternalOrch8.g:1153:1: ruleParameter returns [EObject current=null] : ( ( (lv_ID_0_0= ruleEString ) ) ( (lv_value_1_0= ruleEDouble ) ) ) ;
     public final EObject ruleParameter() throws RecognitionException {
         EObject current = null;
 
@@ -2805,17 +2987,17 @@ public class InternalOrch8Parser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalOrch8.g:1105:2: ( ( ( (lv_ID_0_0= ruleEString ) ) ( (lv_value_1_0= ruleEDouble ) ) ) )
-            // InternalOrch8.g:1106:2: ( ( (lv_ID_0_0= ruleEString ) ) ( (lv_value_1_0= ruleEDouble ) ) )
+            // InternalOrch8.g:1159:2: ( ( ( (lv_ID_0_0= ruleEString ) ) ( (lv_value_1_0= ruleEDouble ) ) ) )
+            // InternalOrch8.g:1160:2: ( ( (lv_ID_0_0= ruleEString ) ) ( (lv_value_1_0= ruleEDouble ) ) )
             {
-            // InternalOrch8.g:1106:2: ( ( (lv_ID_0_0= ruleEString ) ) ( (lv_value_1_0= ruleEDouble ) ) )
-            // InternalOrch8.g:1107:3: ( (lv_ID_0_0= ruleEString ) ) ( (lv_value_1_0= ruleEDouble ) )
+            // InternalOrch8.g:1160:2: ( ( (lv_ID_0_0= ruleEString ) ) ( (lv_value_1_0= ruleEDouble ) ) )
+            // InternalOrch8.g:1161:3: ( (lv_ID_0_0= ruleEString ) ) ( (lv_value_1_0= ruleEDouble ) )
             {
-            // InternalOrch8.g:1107:3: ( (lv_ID_0_0= ruleEString ) )
-            // InternalOrch8.g:1108:4: (lv_ID_0_0= ruleEString )
+            // InternalOrch8.g:1161:3: ( (lv_ID_0_0= ruleEString ) )
+            // InternalOrch8.g:1162:4: (lv_ID_0_0= ruleEString )
             {
-            // InternalOrch8.g:1108:4: (lv_ID_0_0= ruleEString )
-            // InternalOrch8.g:1109:5: lv_ID_0_0= ruleEString
+            // InternalOrch8.g:1162:4: (lv_ID_0_0= ruleEString )
+            // InternalOrch8.g:1163:5: lv_ID_0_0= ruleEString
             {
 
             					newCompositeNode(grammarAccess.getParameterAccess().getIDEStringParserRuleCall_0_0());
@@ -2842,11 +3024,11 @@ public class InternalOrch8Parser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalOrch8.g:1126:3: ( (lv_value_1_0= ruleEDouble ) )
-            // InternalOrch8.g:1127:4: (lv_value_1_0= ruleEDouble )
+            // InternalOrch8.g:1180:3: ( (lv_value_1_0= ruleEDouble ) )
+            // InternalOrch8.g:1181:4: (lv_value_1_0= ruleEDouble )
             {
-            // InternalOrch8.g:1127:4: (lv_value_1_0= ruleEDouble )
-            // InternalOrch8.g:1128:5: lv_value_1_0= ruleEDouble
+            // InternalOrch8.g:1181:4: (lv_value_1_0= ruleEDouble )
+            // InternalOrch8.g:1182:5: lv_value_1_0= ruleEDouble
             {
 
             					newCompositeNode(grammarAccess.getParameterAccess().getValueEDoubleParserRuleCall_1_0());
@@ -2896,7 +3078,7 @@ public class InternalOrch8Parser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleBeat"
-    // InternalOrch8.g:1149:1: entryRuleBeat returns [EObject current=null] : iv_ruleBeat= ruleBeat EOF ;
+    // InternalOrch8.g:1203:1: entryRuleBeat returns [EObject current=null] : iv_ruleBeat= ruleBeat EOF ;
     public final EObject entryRuleBeat() throws RecognitionException {
         EObject current = null;
 
@@ -2904,8 +3086,8 @@ public class InternalOrch8Parser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalOrch8.g:1149:45: (iv_ruleBeat= ruleBeat EOF )
-            // InternalOrch8.g:1150:2: iv_ruleBeat= ruleBeat EOF
+            // InternalOrch8.g:1203:45: (iv_ruleBeat= ruleBeat EOF )
+            // InternalOrch8.g:1204:2: iv_ruleBeat= ruleBeat EOF
             {
              newCompositeNode(grammarAccess.getBeatRule()); 
             pushFollow(FOLLOW_1);
@@ -2932,7 +3114,7 @@ public class InternalOrch8Parser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleBeat"
-    // InternalOrch8.g:1156:1: ruleBeat returns [EObject current=null] : (otherlv_0= ':' ( (lv_ID_1_0= ruleEDouble ) ) ( (lv_commands_2_0= ruleCommand ) )+ ) ;
+    // InternalOrch8.g:1210:1: ruleBeat returns [EObject current=null] : (otherlv_0= ':' ( (lv_ID_1_0= ruleEDouble ) ) ( (lv_commands_2_0= ruleCommand ) )+ ) ;
     public final EObject ruleBeat() throws RecognitionException {
         EObject current = null;
 
@@ -2946,21 +3128,21 @@ public class InternalOrch8Parser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalOrch8.g:1162:2: ( (otherlv_0= ':' ( (lv_ID_1_0= ruleEDouble ) ) ( (lv_commands_2_0= ruleCommand ) )+ ) )
-            // InternalOrch8.g:1163:2: (otherlv_0= ':' ( (lv_ID_1_0= ruleEDouble ) ) ( (lv_commands_2_0= ruleCommand ) )+ )
+            // InternalOrch8.g:1216:2: ( (otherlv_0= ':' ( (lv_ID_1_0= ruleEDouble ) ) ( (lv_commands_2_0= ruleCommand ) )+ ) )
+            // InternalOrch8.g:1217:2: (otherlv_0= ':' ( (lv_ID_1_0= ruleEDouble ) ) ( (lv_commands_2_0= ruleCommand ) )+ )
             {
-            // InternalOrch8.g:1163:2: (otherlv_0= ':' ( (lv_ID_1_0= ruleEDouble ) ) ( (lv_commands_2_0= ruleCommand ) )+ )
-            // InternalOrch8.g:1164:3: otherlv_0= ':' ( (lv_ID_1_0= ruleEDouble ) ) ( (lv_commands_2_0= ruleCommand ) )+
+            // InternalOrch8.g:1217:2: (otherlv_0= ':' ( (lv_ID_1_0= ruleEDouble ) ) ( (lv_commands_2_0= ruleCommand ) )+ )
+            // InternalOrch8.g:1218:3: otherlv_0= ':' ( (lv_ID_1_0= ruleEDouble ) ) ( (lv_commands_2_0= ruleCommand ) )+
             {
             otherlv_0=(Token)match(input,34,FOLLOW_26); 
 
             			newLeafNode(otherlv_0, grammarAccess.getBeatAccess().getColonKeyword_0());
             		
-            // InternalOrch8.g:1168:3: ( (lv_ID_1_0= ruleEDouble ) )
-            // InternalOrch8.g:1169:4: (lv_ID_1_0= ruleEDouble )
+            // InternalOrch8.g:1222:3: ( (lv_ID_1_0= ruleEDouble ) )
+            // InternalOrch8.g:1223:4: (lv_ID_1_0= ruleEDouble )
             {
-            // InternalOrch8.g:1169:4: (lv_ID_1_0= ruleEDouble )
-            // InternalOrch8.g:1170:5: lv_ID_1_0= ruleEDouble
+            // InternalOrch8.g:1223:4: (lv_ID_1_0= ruleEDouble )
+            // InternalOrch8.g:1224:5: lv_ID_1_0= ruleEDouble
             {
 
             					newCompositeNode(grammarAccess.getBeatAccess().getIDEDoubleParserRuleCall_1_0());
@@ -2987,24 +3169,24 @@ public class InternalOrch8Parser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalOrch8.g:1187:3: ( (lv_commands_2_0= ruleCommand ) )+
-            int cnt20=0;
-            loop20:
+            // InternalOrch8.g:1241:3: ( (lv_commands_2_0= ruleCommand ) )+
+            int cnt21=0;
+            loop21:
             do {
-                int alt20=2;
-                int LA20_0 = input.LA(1);
+                int alt21=2;
+                int LA21_0 = input.LA(1);
 
-                if ( ((LA20_0>=27 && LA20_0<=28)||(LA20_0>=30 && LA20_0<=31)||LA20_0==33) ) {
-                    alt20=1;
+                if ( ((LA21_0>=27 && LA21_0<=28)||(LA21_0>=30 && LA21_0<=31)||LA21_0==33) ) {
+                    alt21=1;
                 }
 
 
-                switch (alt20) {
+                switch (alt21) {
             	case 1 :
-            	    // InternalOrch8.g:1188:4: (lv_commands_2_0= ruleCommand )
+            	    // InternalOrch8.g:1242:4: (lv_commands_2_0= ruleCommand )
             	    {
-            	    // InternalOrch8.g:1188:4: (lv_commands_2_0= ruleCommand )
-            	    // InternalOrch8.g:1189:5: lv_commands_2_0= ruleCommand
+            	    // InternalOrch8.g:1242:4: (lv_commands_2_0= ruleCommand )
+            	    // InternalOrch8.g:1243:5: lv_commands_2_0= ruleCommand
             	    {
 
             	    					newCompositeNode(grammarAccess.getBeatAccess().getCommandsCommandParserRuleCall_2_0());
@@ -3033,12 +3215,12 @@ public class InternalOrch8Parser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    if ( cnt20 >= 1 ) break loop20;
+            	    if ( cnt21 >= 1 ) break loop21;
                         EarlyExitException eee =
-                            new EarlyExitException(20, input);
+                            new EarlyExitException(21, input);
                         throw eee;
                 }
-                cnt20++;
+                cnt21++;
             } while (true);
 
 
@@ -3064,7 +3246,7 @@ public class InternalOrch8Parser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleGenerator"
-    // InternalOrch8.g:1210:1: entryRuleGenerator returns [EObject current=null] : iv_ruleGenerator= ruleGenerator EOF ;
+    // InternalOrch8.g:1264:1: entryRuleGenerator returns [EObject current=null] : iv_ruleGenerator= ruleGenerator EOF ;
     public final EObject entryRuleGenerator() throws RecognitionException {
         EObject current = null;
 
@@ -3072,8 +3254,8 @@ public class InternalOrch8Parser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalOrch8.g:1210:50: (iv_ruleGenerator= ruleGenerator EOF )
-            // InternalOrch8.g:1211:2: iv_ruleGenerator= ruleGenerator EOF
+            // InternalOrch8.g:1264:50: (iv_ruleGenerator= ruleGenerator EOF )
+            // InternalOrch8.g:1265:2: iv_ruleGenerator= ruleGenerator EOF
             {
              newCompositeNode(grammarAccess.getGeneratorRule()); 
             pushFollow(FOLLOW_1);
@@ -3100,7 +3282,7 @@ public class InternalOrch8Parser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGenerator"
-    // InternalOrch8.g:1217:1: ruleGenerator returns [EObject current=null] : ( ( ( (lv_mode_0_1= 'type' | lv_mode_0_2= 'custom' ) ) ) ( (lv_type_1_0= ruleEString ) ) ) ;
+    // InternalOrch8.g:1271:1: ruleGenerator returns [EObject current=null] : ( ( ( (lv_mode_0_1= 'type' | lv_mode_0_2= 'custom' ) ) ) ( (lv_type_1_0= ruleEString ) ) ) ;
     public final EObject ruleGenerator() throws RecognitionException {
         EObject current = null;
 
@@ -3113,37 +3295,37 @@ public class InternalOrch8Parser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalOrch8.g:1223:2: ( ( ( ( (lv_mode_0_1= 'type' | lv_mode_0_2= 'custom' ) ) ) ( (lv_type_1_0= ruleEString ) ) ) )
-            // InternalOrch8.g:1224:2: ( ( ( (lv_mode_0_1= 'type' | lv_mode_0_2= 'custom' ) ) ) ( (lv_type_1_0= ruleEString ) ) )
+            // InternalOrch8.g:1277:2: ( ( ( ( (lv_mode_0_1= 'type' | lv_mode_0_2= 'custom' ) ) ) ( (lv_type_1_0= ruleEString ) ) ) )
+            // InternalOrch8.g:1278:2: ( ( ( (lv_mode_0_1= 'type' | lv_mode_0_2= 'custom' ) ) ) ( (lv_type_1_0= ruleEString ) ) )
             {
-            // InternalOrch8.g:1224:2: ( ( ( (lv_mode_0_1= 'type' | lv_mode_0_2= 'custom' ) ) ) ( (lv_type_1_0= ruleEString ) ) )
-            // InternalOrch8.g:1225:3: ( ( (lv_mode_0_1= 'type' | lv_mode_0_2= 'custom' ) ) ) ( (lv_type_1_0= ruleEString ) )
+            // InternalOrch8.g:1278:2: ( ( ( (lv_mode_0_1= 'type' | lv_mode_0_2= 'custom' ) ) ) ( (lv_type_1_0= ruleEString ) ) )
+            // InternalOrch8.g:1279:3: ( ( (lv_mode_0_1= 'type' | lv_mode_0_2= 'custom' ) ) ) ( (lv_type_1_0= ruleEString ) )
             {
-            // InternalOrch8.g:1225:3: ( ( (lv_mode_0_1= 'type' | lv_mode_0_2= 'custom' ) ) )
-            // InternalOrch8.g:1226:4: ( (lv_mode_0_1= 'type' | lv_mode_0_2= 'custom' ) )
+            // InternalOrch8.g:1279:3: ( ( (lv_mode_0_1= 'type' | lv_mode_0_2= 'custom' ) ) )
+            // InternalOrch8.g:1280:4: ( (lv_mode_0_1= 'type' | lv_mode_0_2= 'custom' ) )
             {
-            // InternalOrch8.g:1226:4: ( (lv_mode_0_1= 'type' | lv_mode_0_2= 'custom' ) )
-            // InternalOrch8.g:1227:5: (lv_mode_0_1= 'type' | lv_mode_0_2= 'custom' )
+            // InternalOrch8.g:1280:4: ( (lv_mode_0_1= 'type' | lv_mode_0_2= 'custom' ) )
+            // InternalOrch8.g:1281:5: (lv_mode_0_1= 'type' | lv_mode_0_2= 'custom' )
             {
-            // InternalOrch8.g:1227:5: (lv_mode_0_1= 'type' | lv_mode_0_2= 'custom' )
-            int alt21=2;
-            int LA21_0 = input.LA(1);
+            // InternalOrch8.g:1281:5: (lv_mode_0_1= 'type' | lv_mode_0_2= 'custom' )
+            int alt22=2;
+            int LA22_0 = input.LA(1);
 
-            if ( (LA21_0==35) ) {
-                alt21=1;
+            if ( (LA22_0==35) ) {
+                alt22=1;
             }
-            else if ( (LA21_0==36) ) {
-                alt21=2;
+            else if ( (LA22_0==36) ) {
+                alt22=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 21, 0, input);
+                    new NoViableAltException("", 22, 0, input);
 
                 throw nvae;
             }
-            switch (alt21) {
+            switch (alt22) {
                 case 1 :
-                    // InternalOrch8.g:1228:6: lv_mode_0_1= 'type'
+                    // InternalOrch8.g:1282:6: lv_mode_0_1= 'type'
                     {
                     lv_mode_0_1=(Token)match(input,35,FOLLOW_5); 
 
@@ -3159,7 +3341,7 @@ public class InternalOrch8Parser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalOrch8.g:1239:6: lv_mode_0_2= 'custom'
+                    // InternalOrch8.g:1293:6: lv_mode_0_2= 'custom'
                     {
                     lv_mode_0_2=(Token)match(input,36,FOLLOW_5); 
 
@@ -3183,11 +3365,11 @@ public class InternalOrch8Parser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalOrch8.g:1252:3: ( (lv_type_1_0= ruleEString ) )
-            // InternalOrch8.g:1253:4: (lv_type_1_0= ruleEString )
+            // InternalOrch8.g:1306:3: ( (lv_type_1_0= ruleEString ) )
+            // InternalOrch8.g:1307:4: (lv_type_1_0= ruleEString )
             {
-            // InternalOrch8.g:1253:4: (lv_type_1_0= ruleEString )
-            // InternalOrch8.g:1254:5: lv_type_1_0= ruleEString
+            // InternalOrch8.g:1307:4: (lv_type_1_0= ruleEString )
+            // InternalOrch8.g:1308:5: lv_type_1_0= ruleEString
             {
 
             					newCompositeNode(grammarAccess.getGeneratorAccess().getTypeEStringParserRuleCall_1_0());
@@ -3252,9 +3434,9 @@ public class InternalOrch8Parser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_10 = new BitSet(new long[]{0x0000000000030000L});
     public static final BitSet FOLLOW_11 = new BitSet(new long[]{0x0000000000020000L});
     public static final BitSet FOLLOW_12 = new BitSet(new long[]{0x0000000004080000L});
-    public static final BitSet FOLLOW_13 = new BitSet(new long[]{0x00000002DC080000L});
+    public static final BitSet FOLLOW_13 = new BitSet(new long[]{0x00000002CC080000L});
     public static final BitSet FOLLOW_14 = new BitSet(new long[]{0x00000000041A0000L});
-    public static final BitSet FOLLOW_15 = new BitSet(new long[]{0x00000002D8020000L});
+    public static final BitSet FOLLOW_15 = new BitSet(new long[]{0x00000002C8020000L});
     public static final BitSet FOLLOW_16 = new BitSet(new long[]{0x0000001800000000L});
     public static final BitSet FOLLOW_17 = new BitSet(new long[]{0x0000000000020030L});
     public static final BitSet FOLLOW_18 = new BitSet(new long[]{0x0000000000000040L});

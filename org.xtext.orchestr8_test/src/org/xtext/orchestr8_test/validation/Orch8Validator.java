@@ -63,7 +63,7 @@ public class Orch8Validator extends AbstractOrch8Validator {
 	public static final String NEGATIVE_BEAT_ID = "negativeBeatID";
 	public static final String INVALID_BEAT_ID = "invalidBeatID";
 	public static final String INVALID_SAMPLING_RATE = "invalidSamplingRate";
-
+	public static final String INVALID_NOTE_LENGTH = "invalidNoteLength";
 	
 	@Check
 	public void checkCmdTempo(CmdTempo cmd) {
@@ -137,6 +137,17 @@ public class Orch8Validator extends AbstractOrch8Validator {
 					INVALID_SAMPLING_RATE);
 		}
 	}
+	
+	@Check
+	public void checkNoteLength (CmdPlay cmd) {
+		double len = cmd.getLength();
+		if (len <= 0.0) {
+			error("Note length must be greater than 0.",
+					Orchestr8Package.Literals.CMD_PLAY__LENGTH,
+					INVALID_NOTE_LENGTH);
+		}
+	}
+	
 	
 //	public static final String INVALID_NAME = "invalidName";
 //
